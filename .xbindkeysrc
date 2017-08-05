@@ -1,0 +1,168 @@
+"google-chrome todoist.com"
+Mod4 + t
+
+"gvim"
+Mod4 + v
+
+"gvim /home/aaron/.xbindkeysrc"
+Mod4 + k
+
+"gvim /home/aaron/.bashrc"
+Mod4 + b
+
+"gvim /home/aaron/.i3/config"
+Mod4 + Shift + i
+
+"killall xbindkeys; xbindkeys"
+Mod4 + r
+
+"xfce4-terminal -e htop"
+Mod4 + h
+
+"xfce4-terminal -e alsamixer"
+Mod4 + m
+
+"pavucontrol"
+Mod4 + Shift + m
+
+"google-chrome"
+Mod4 + f
+
+#open rss feeds
+"google-chrome https://www.commafeed.com/#/feeds/view/category/all"
+Mod4 + w
+
+"google-chrome calendar.google.com"
+Mod4 + c
+
+"xkill"
+Mod4 + Shift + x
+
+"gvim /home/aaron/.vimrc"
+Mod4 + Shift + v
+
+#make a timestamped note
+"gvim /home/aaron/notes/note_$(date '+%m-%d-%y_%H-%M-%S').txt"
+Mod4 + Shift + n
+
+#list of things that I want to be doing
+"gvim /home/aaron/todo.txt"
+Mod4 + Shift + t
+
+#push changes to config files to git
+"xfce4-terminal -e /home/aaron/scripts/push_rcs_to_git.sh"
+Mod4 + Shift + r
+
+#display list of commits to config files
+"google-chrome https://github.com/aaevan/aaevan_rc_files/commits/master"
+Mod4 + Shift + Control + r
+
+#ping google 3 times.
+"xfce4-terminal -e /home/aaron/scripts/pinger"
+Mod4 + p
+
+#volume up
+"amixer -D pulse sset Master 4%+"
+XF86AudioRaiseVolume
+
+#volume down
+"amixer -D pulse sset Master 4%-"
+XF86AudioLowerVolume
+
+#volume SMALL-up
+"amixer -D pulse sset Master 1%+"
+Shift + XF86AudioRaiseVolume
+
+#volume SMALL-down
+"amixer -D pulse sset Master 1%-"
+Shift + XF86AudioLowerVolume
+
+#volume mute
+"amixer -D pulse sset Master mute"
+XF86AudioMute
+
+#volume unmute
+"amixer -D pulse sset Master unmute"
+XF86AudioMute + Shift
+
+#take screenshot
+"scrot -b -d 5 '%Y:%m:%d:%H:%M:%S.png' -e 'mv $f ~/Desktop/'"
+Print
+
+"xfce4-terminal -e ipython"
+Mod4 + Shift + P
+
+"nautilus"
+Mod4 + n
+
+#Crawl Webtiles
+"google-chrome http://crawl.akrasiac.org:8080/#lobby"
+Mod4 + Shift + w
+
+#weather
+"google-chrome http://forecast.weather.gov/MapClick.php?lat=41.8239879300005\&lon=-71.41282753899964"
+Mod4 + Shift + f
+
+#rick astley
+"google-chrome https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+Mod4 + 8
+
+#scan wireless network for other hosts
+"xfce4-terminal -e /home/aaron/scripts/network_scan.sh"
+Mod4 + Shift + h
+
+#open OSMM slack page
+"google-chrome https://makermill.slack.com/messages/general/"
+Mod4 + o
+
+#devdiff
+"xfce4-terminal -e /home/aaron/scripts/devdiff"
+Mod4 + 1
+
+#py_arduino_serial.py
+"xfce4-terminal -e ~/scripts/py_arduino_serial.py"
+Mod4 + Shift + a
+
+#gen.lib.rus.ec
+"google-chrome gen.lib.rus.ec"
+Mod4 + Shift + g
+
+#take an area screenshot
+"/home/aaron/scripts/area_screen.sh"
+Mod4 + Print
+
+#arduino
+"/home/aaron/arduino-1.6.9/arduino"
+Mod4 + a
+
+#morning brain note
+"gvim /home/aaron/notes/morningbrain_$(date '+%m-%d-%y_%H-%M-%S').txt"
+Mod4 + Shift + b
+
+#yoga hotkey
+"google-chrome https://www.youtube.com/watch?v=D9q5WsMk4ro"
+Mod4 + y
+
+#7-min workout hotkey
+"google-chrome https://www.youtube.com/watch?v=Jru5B044HOs"
+Mod4 + 7
+
+#survival series quote (requires libxosd)
+"/home/aaron/scripts/randquote.sh"
+Mod4 + q
+
+#truisms series quote (requires libxosd)
+"/home/aaron/scripts/truisms.sh"
+Mod4 + Shift + q
+
+#pomodoro hotkey
+"sleep .1; bash /home/aaron/scripts/pomodoro.sh &"
+Mod4 + BackSpace
+
+#what are you working on?
+"xfce4-terminal -e /home/aaron/scripts/goalbanner.sh"
+Mod4 + Shift + BackSpace
+
+#close my eyes
+"google-chrome https://youtu.be/Ss0kFNUP4P4?t=1m11s"
+Mod4 + Shift + l

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ls /dev/ > /tmp/1.txt
+read -rsp $'Remove or insert your device and press any key.\n' -n1 key
+ls /dev/ > /tmp/2.txt
+diff /tmp/1.txt /tmp/2.txt
+read -rsp $'Press any key to exit.\n' -n1 key
+
