@@ -178,3 +178,11 @@ Mod4 + d
 #arandr (screen setup)
 "arandr"
 Mod4 + shift + a
+
+#bed screen layout:
+"/home/aaron/.screenlayout/bed_setup.sh"
+Mod4 + shift + s
+
+#default screen layout:
+"/home/aaron/.screenlayout/default.sh"
+Mod4 + shift + d
