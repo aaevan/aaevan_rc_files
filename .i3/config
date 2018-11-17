@@ -6,7 +6,7 @@ set $mod Mod1
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 7
+font pango:Anonymous\ Pro\ 7
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -97,8 +97,10 @@ bindsym $mod+0 workspace 10
 bindsym $mod+grave workspace 0
 bindsym $mod+minus workspace 11
 bindsym $mod+equal workspace 12
-bindsym $mod+BackSpace workspace "TODO"
-bindsym $mod+backslash workspace "IDEAS"
+bindsym $mod+BackSpace workspace 13
+bindsym $mod+bracketleft workspace 14
+bindsym $mod+bracketright workspace 15
+bindsym $mod+backslash workspace 16
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -115,8 +117,10 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Shift+grave move container to workspace 0
 bindsym $mod+Shift+minus move container to workspace 11
 bindsym $mod+Shift+equal move container to workspace 12
-bindsym $mod+Shift+BackSpace move container to workspace "TODO"
-bindsym $mod+Shift+backslash move container to workspace "IDEAS"
+bindsym $mod+Shift+BackSpace move container to workspace 13
+bindsym $mod+Shift+bracketleft move container to workspace 14
+bindsym $mod+Shift+bracketright move container to workspace 15
+bindsym $mod+Shift+backslash move container to workspace 16
 
 # binding to add pseudo-fullscreen
 bindsym $mod+Shift+f focus parent; fullscreen; focus child
@@ -127,7 +131,7 @@ bindsym $mod+b border toggle
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# 
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
@@ -168,7 +172,27 @@ bar {
 
 hide_edge_borders both
 
+set $bg     #202020
+set $fg     #9f9f9f
+set $hi     #efefef
+set $ac     #8f8f8f
+set $tx     #000000
+set $ia     #888888
+set $be     #afafaf
+set $yw     #cccccc
+set $gn     #888888
+set $rd     #989898
+
+# i3-msg reload from terminal to reload!
+
+# set some nice colors      border     background  text
+client.focused              $ac        $ac         $tx
+client.unfocused            $bg        $bg         $ia
+client.focused_inactive     $bg        $bg         $ac
+client.urgent               $rd        $rd         $tx
+
 exec --no-startup-id xsetroot -solid "#333333"
 exec xbindkeys
 exec arbtt-capture
 exec nm-applet
+exec fluxgui

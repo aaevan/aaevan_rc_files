@@ -16,10 +16,10 @@ Mod4 + Shift + i
 "killall xbindkeys; xbindkeys"
 Mod4 + r
 
-"xfce4-terminal -e htop"
+"xfce4-terminal --hide-menubar -e htop"
 Mod4 + h
 
-"xfce4-terminal -e alsamixer"
+"xfce4-terminal --hide-menubar -e alsamixer"
 Mod4 + m
 
 "pavucontrol"
@@ -50,7 +50,7 @@ Mod4 + Shift + n
 Mod4 + Shift + t
 
 #push changes to config files to git
-"xfce4-terminal -e /home/aaron/scripts/push_rcs_to_git.sh"
+"xfce4-terminal --hide-menubar -e /home/aaron/scripts/push_rcs_to_git.sh"
 Mod4 + Shift + r
 
 #display list of commits to config files
@@ -58,7 +58,7 @@ Mod4 + Shift + r
 Mod4 + Shift + Control + r
 
 #ping google 3 times.
-"xfce4-terminal -e /home/aaron/scripts/pinger"
+"xfce4-terminal --hide-menubar -e /home/aaron/scripts/pinger"
 Mod4 + p
 
 #volume up
@@ -89,7 +89,7 @@ XF86AudioMute + Shift
 "scrot -b -d 5 '%Y:%m:%d:%H:%M:%S.png' -e 'mv $f ~/Desktop/'"
 Print
 
-"xfce4-terminal -e ipython"
+"xfce4-terminal --hide-menubar -e python"
 Mod4 + Shift + P
 
 "nautilus"
@@ -100,7 +100,7 @@ Mod4 + n
 Mod4 + Shift + w
 
 #weather
-"google-chrome http://forecast.weather.gov/MapClick.php?lat=41.8239879300005\&lon=-71.41282753899964"
+"google-chrome https://forecast.weather.gov/MapClick.php?lat=42.38675000000006&lon=-71.09844999999996"
 Mod4 + Shift + f
 
 #rick astley
@@ -108,20 +108,12 @@ Mod4 + Shift + f
 Mod4 + 8
 
 #scan wireless network for other hosts
-"xfce4-terminal -e /home/aaron/scripts/network_scan.sh"
+"xfce4-terminal --hide-menubar -e /home/aaron/scripts/network_scan.sh"
 Mod4 + Shift + h
 
-#open OSMM slack page
-"google-chrome https://makermill.slack.com/messages/general/"
-Mod4 + o
-
 #devdiff
-"xfce4-terminal -e /home/aaron/scripts/devdiff"
+"xfce4-terminal --hide-menubar -e /home/aaron/scripts/devdiff"
 Mod4 + 1
-
-#py_arduino_serial.py
-"xfce4-terminal -e ~/scripts/py_arduino_serial.py"
-Mod4 + Shift + a
 
 #gen.lib.rus.ec
 "google-chrome gen.lib.rus.ec"
@@ -130,10 +122,6 @@ Mod4 + Shift + g
 #take an area screenshot
 "/home/aaron/scripts/area_screen.sh"
 Mod4 + Print
-
-#arduino
-"/home/aaron/arduino-1.6.9/arduino"
-Mod4 + a
 
 #morning brain note
 "gvim /home/aaron/notes/morningbrain_$(date '+%m-%d-%y_%H-%M-%S').txt"
@@ -160,9 +148,33 @@ Mod4 + Shift + q
 Mod4 + BackSpace
 
 #what are you working on?
-"xfce4-terminal -e /home/aaron/scripts/goalbanner.sh"
+"xfce4-terminal --hide-menubar -e /home/aaron/scripts/goalbanner.sh"
 Mod4 + Shift + BackSpace
 
 #close my eyes
 "google-chrome https://youtu.be/Ss0kFNUP4P4?t=1m11s"
 Mod4 + Shift + l
+
+#play/pause spotify
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+F8
+
+#next
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+F9
+
+#previous
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+F7
+
+#daily CL searches:
+"google-chrome https://boston.craigslist.org/search/jjj?query=-marketing+-cook+-restaurant+-landscape+-CDL; google-chrome https://boston.craigslist.org/search/hhh?query=november&hasPic=1&postedToday=1&max_price=750&availabilityMode=0"
+Mod4 + j
+
+#ping google 3 times.
+"xfce4-terminal --hide-menubar -e /home/aaron/scripts/findmnt_wrapper.sh"
+Mod4 + d
+
+#arandr (screen setup)
+"arandr"
+Mod4 + shift + a

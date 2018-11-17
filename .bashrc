@@ -121,3 +121,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+alias lgrep='ls | grep'
+alias hgrep='history | grep'
+
+export PATH=~/anaconda3/bin:$PATH
+
+setxkbmap -option compose:caps

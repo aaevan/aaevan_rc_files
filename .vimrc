@@ -13,6 +13,7 @@ Plugin 'jeffkreeftmeijer/vim-numbertoggle.git'
 Plugin 'https://github.com/jplaut/vim-arduino-ino'
 Plugin 'https://github.com/lambdalisue/vim-fullscreen'
 Plugin 'https://github.com/tpope/vim-surround'
+Plugin 'https://github.com/sophacles/vim-processing'
 
 " more Plugin commands
 " ...
@@ -85,3 +86,13 @@ noremap  <Right>  <NOP>
 "Do the last operation and move up or down a line
 nmap <C-Down> j.
 nmap <C-Up> k.
+
+"syntastic config:
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
