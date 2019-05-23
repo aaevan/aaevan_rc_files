@@ -1,17 +1,17 @@
  #!/bin/bash
 
-echo PID:$BASHPID | osd_cat --pos=bottom --align=right --font=-*-helvetica-bold-r-*-*-15-*-*-*-*-*-*-* --offset=-10 -d 1499 &
-
 function finish {
     killall osd_cat
 }
 trap finish EXIT
 
 function osd_cat_br {
+    #writes to the bottom right of the screen and includes the PID.
     #osd_cat needs something piped to it-- we can't pipe directly to a function
     #so first the data needs to be read.
     while read data; do
         echo "$data" | osd_cat --pos=bottom --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-250 -d 1 &
+        echo PID:$$ | osd_cat --pos=bottom --align=right --font=-*-helvetica-bold-r-*-*-15-*-*-*-*-*-*-* --offset=-10 -d 1 &
     done 
 }
 

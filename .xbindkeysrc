@@ -89,7 +89,7 @@ XF86AudioMute + Shift
 "scrot -b -d 5 '%Y:%m:%d:%H:%M:%S.png' -e 'mv $f ~/Desktop/'"
 Print
 
-"xfce4-terminal --hide-menubar -e python"
+"xfce4-terminal --hide-menubar -e python3"
 Mod4 + Shift + P
 
 "nautilus"
@@ -168,8 +168,9 @@ F9
 F7
 
 #daily CL searches:
-"google-chrome https://boston.craigslist.org/search/jjj?query=-marketing+-cook+-restaurant+-landscape+-CDL; google-chrome https://boston.craigslist.org/search/hhh?query=november&hasPic=1&postedToday=1&max_price=750&availabilityMode=0"
-Mod4 + j
+#"google-chrome https://boston.craigslist.org/search/jjj?query=-marketing+-cook+-restaurant+-landscape+-CDL; google-chrome https://boston.craigslist.org/search/hhh?query=november&hasPic=1&postedToday=1&max_price=750&availabilityMode=0"
+#Mod4 + j
+
 
 #ping google 3 times.
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/findmnt_wrapper.sh"
@@ -186,3 +187,19 @@ Mod4 + shift + s
 #default screen layout:
 "/home/aaron/.screenlayout/default.sh"
 Mod4 + shift + d
+
+#typing test
+"google-chrome https://10fastfingers.com/typing-test/english"
+Mod4 + shift + 1
+
+#spotify previous song
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+Mod4 + Left
+
+#spotify next song
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+Mod4 + Right
+
+#spotify play/pause toggle
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+Mod4 + space
