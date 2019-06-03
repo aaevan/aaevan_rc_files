@@ -203,3 +203,12 @@ Mod4 + Right
 #spotify play/pause toggle
 "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
 Mod4 + space
+
+#open document viewer
+"evince"
+Mod4 + equal
+
+#open jupyter notebook
+"xfce4-terminal --hide-menubar -e /home/aaron/scripts/open_notebook.sh"
+Mod4 + minus
+
