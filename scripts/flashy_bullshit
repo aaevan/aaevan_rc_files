@@ -1,0 +1,74 @@
+#!/bin/bash
+
+REPEATS=40
+PERIOD=.04
+FLASHES=1
+DOWNTIME=0
+MESSAGE='STUDY TIME!'
+STAY_ON=100
+PERSIST=1
+LINGER_REPEATS=20
+OUTLINE=2
+
+
+while getopts ":d:f:m:p:r:" opt; do
+  case $opt in
+    r)
+      echo "-r was triggered, Parameter: $OPTARG" >&2
+      REPEATS=$OPTARG
+      ;;
+    d)
+      echo "-d was triggered, Parameter: $OPTARG" >&2
+      DOWNTIME=$OPTARG
+      ;;
+    p)
+      echo "-p was triggered, Parameter: $OPTARG" >&2
+      PERIOD=$OPTARG
+      ;;
+    f)
+      echo "-f was triggered, Parameter: $OPTARG" >&2
+      FLASHES=$OPTARG
+      ;;
+    m)
+      echo "-m was triggered, Parameter: $OPTARG" >&2
+      MESSAGE=$OPTARG
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
+
+
+FONTSIZE=100
+FONT=-*-helvetica-bold-r-*-*-`echo $FONTSIZE`-*-*-*-*-*-*-*;
+
+for i in `seq 1 $FLASHES`
+do
+    killall osd_cat
+    FONTSIZE=5
+    OFFSET=-50
+    for j in `seq 1 $REPEATS`
+        do
+        COLOR=`~/scripts/rand_color.py`
+        FONTSIZE=$(( FONTSIZE+5 ))
+        OFFSET=$(( OFFSET - 12 ))
+        FONT=-*-helvetica-bold-r-*-*-`echo $FONTSIZE`-*-*-*-*-*-*-*;
+        echo $MESSAGE | osd_cat --pos=bottom --align=center --font=$FONT --color=$COLOR --offset=$OFFSET --delay=$PERSIST --outline=$OUTLINE &
+        sleep $PERIOD
+    done
+    for j in `seq $LINGER_REPEATS`
+        do
+        COLOR=`~/scripts/rand_color.py`
+        FONT=-*-helvetica-bold-r-*-*-`echo $FONTSIZE`-*-*-*-*-*-*-*;
+        echo $MESSAGE | osd_cat --pos=bottom --align=center --font=$FONT --color=$COLOR --offset=$OFFSET --delay=$PERSIST --outline=$OUTLINE &
+        sleep $PERIOD
+    done 
+    killall osd_cat
+    sleep $DOWNTIME
+done
