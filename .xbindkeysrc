@@ -205,10 +205,20 @@ Mod4 + Right
 Mod4 + space
 
 #open document viewer
-"evince"
+"okular /home/aaron/1study/python_data.pdf"
 Mod4 + equal
 
 #open jupyter notebook
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/open_notebook.sh"
 Mod4 + minus
 
+#open distraction list
+"gvim ~/Desktop/distraction_list.txt"
+Alt+Mod4 + d
+
+"~/scripts/flashy_bullshit -m 'FUCK YEAH!'"
+Mod4 + Shift + 2
+
+#open spotify
+"spotify"
+Mod4 + backslash

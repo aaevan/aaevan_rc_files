@@ -1,5 +1,34 @@
  #!/bin/bash
 
+MINUTES=25
+SECONDS=0
+WILL_BREAK=1
+
+while getopts ":m:s:b:" opt; do
+  case $opt in
+    m)
+      echo "-m was triggered, Parameter: $OPTARG" >&2
+      MINUTES=$OPTARG
+      ;;
+    s)
+      echo "-s was triggered, Parameter: $OPTARG" >&2
+      SECONDS=$OPTARG
+      ;;
+    b)
+      echo "-b was triggered, Parameter: $OPTARG" >&2
+      WILL_BREAK=$OPTARG
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
+
 function finish {
     killall osd_cat
 }
@@ -31,12 +60,13 @@ function print_countdown {
         sleep 1
 }
 
-print_countdown 25 0
-for i in `seq 0 24`;
+#/home/aaron/scripts/flashy_bullshit -m 'STUDY TIME!'
+print_countdown $MINUTES 0
+for i in `seq 0 $(($MINUTES - 1))`;
 do
         for j in `seq 0 59`
         do
-            mins=$(expr 24 - $i)
+            mins=$(expr $(($MINUTES - 1)) - $i)
             secs=$(expr 59 - $j)
             print_countdown $mins $secs
         done
@@ -58,12 +88,15 @@ do
         print_countdown $mins $secs
     done
 done
+
+if [ $WILL_BREAK -eq 1 ];
     if zenity --question --text="Again?";
         then
         ~/scripts/pomodoro.sh & 
         else
         exit
     fi
+fi
 
 
 
