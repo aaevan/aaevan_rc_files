@@ -39,8 +39,10 @@ function osd_cat_br {
     #osd_cat needs something piped to it-- we can't pipe directly to a function
     #so first the data needs to be read.
     while read data; do
-        echo "$data" | osd_cat --pos=bottom --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-250 -d 1 &
-        echo PID:$$ | osd_cat --pos=bottom --align=right --font=-*-helvetica-bold-r-*-*-15-*-*-*-*-*-*-* --offset=-10 -d 1 &
+        echo "$data" | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-4 -i -10 -d 1 -O 2 &
+        echo PID:$$ | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-10-*-*-*-*-*-*-* --offset=50 -i -6 -d 1 -O 2 &
+        #echo "$data" | osd_cat --pos=bottom --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-250 -d 1 &
+        #echo PID:$$ | osd_cat --pos=bottom --align=right --font=-*-helvetica-bold-r-*-*-15-*-*-*-*-*-*-* --offset=-10 -d 1 &
     done 
 }
 
@@ -60,7 +62,7 @@ function print_countdown {
         sleep 1
 }
 
-/home/aaron/scripts/flashy_bullshit -m 'STUDY TIME!'
+#/home/aaron/scripts/flashy_bullshit -m 'STUDY TIME!'
 print_countdown $MINUTES 0
 for i in `seq 0 $(($MINUTES - 1))`;
 do
@@ -90,6 +92,7 @@ do
 done
 
 if [ $WILL_BREAK -eq 1 ];
+    then
     if zenity --question --text="Again?";
         then
         ~/scripts/pomodoro.sh & 

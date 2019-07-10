@@ -155,22 +155,9 @@ Mod4 + Shift + BackSpace
 "google-chrome https://youtu.be/Ss0kFNUP4P4?t=1m11s"
 Mod4 + Shift + l
 
-#play/pause spotify
-"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-F8
-
-#next
-"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
-F9
-
-#previous
-"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-F7
-
 #daily CL searches:
 #"google-chrome https://boston.craigslist.org/search/jjj?query=-marketing+-cook+-restaurant+-landscape+-CDL; google-chrome https://boston.craigslist.org/search/hhh?query=november&hasPic=1&postedToday=1&max_price=750&availabilityMode=0"
 #Mod4 + j
-
 
 #ping google 3 times.
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/findmnt_wrapper.sh"
@@ -205,7 +192,7 @@ Mod4 + Right
 Mod4 + space
 
 #open document viewer
-"okular /home/aaron/1study/python_data.pdf"
+"evince"
 Mod4 + equal
 
 #open jupyter notebook
@@ -222,3 +209,15 @@ Mod4 + Shift + 2
 #open spotify
 "spotify"
 Mod4 + backslash
+
+#open ankiweb
+"google-chrome https://ankiweb.net/decks/"
+Alt + Mod4 + a
+
+#open ankiweb card creation
+"google-chrome https://ankiuser.net/edit/"
+Alt + Mod4 + q
+
+#open jupyter notebook
+"pqiv -fti ~/scripts/ergodox_layout.png"
+Mod4 + 6
