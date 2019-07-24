@@ -85,10 +85,6 @@ XF86AudioMute
 "amixer -D pulse sset Master unmute"
 XF86AudioMute + Shift
 
-#take screenshot
-"scrot -b -d 5 '%Y:%m:%d:%H:%M:%S.png' -e 'mv $f ~/Desktop/'"
-Print
-
 "xfce4-terminal --hide-menubar -e python3"
 Mod4 + Shift + P
 
@@ -121,7 +117,7 @@ Mod4 + Shift + g
 
 #take an area screenshot
 "/home/aaron/scripts/area_screen.sh"
-Mod4 + Print
+Mod4 + 0
 
 #morning brain note
 "gvim /home/aaron/notes/morningbrain_$(date '+%m-%d-%y_%H-%M-%S').txt"

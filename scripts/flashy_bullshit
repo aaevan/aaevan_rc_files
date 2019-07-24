@@ -46,7 +46,7 @@ done
 
 
 FONTSIZE=100
-FONT=-*-helvetica-bold-r-*-*-`echo $FONTSIZE`-*-*-*-*-*-*-*;
+FONT=-bitsream-bitsream\ charter-bold-r-normal-*-*-`echo $FONTSIZE`-*-*-*-*-ascii-*
 
 for i in `seq 1 $FLASHES`
 do
