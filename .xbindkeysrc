@@ -217,3 +217,7 @@ Alt + Mod4 + q
 #open jupyter notebook
 "pqiv -fti ~/scripts/ergodox_layout.png"
 Mod4 + 6
+
+#open active selling in ebay:
+"google-chrome https://www.ebay.com/mys/active"
+Mod4 + Shift + e
