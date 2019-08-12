@@ -40,7 +40,7 @@ function osd_cat_br {
     #so first the data needs to be read.
     while read data; do
         echo "$data" | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-4 -i -10 -d 1 -O 2 &
-        echo PID:$$ | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-10-*-*-*-*-*-*-* --offset=50 -i -6 -d 1 -O 2 &
+        echo PID:$$ | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-* --offset=50 -i -6 -d 1 -O 2 &
         #echo "$data" | osd_cat --pos=bottom --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-250 -d 1 &
         #echo PID:$$ | osd_cat --pos=bottom --align=right --font=-*-helvetica-bold-r-*-*-15-*-*-*-*-*-*-* --offset=-10 -d 1 &
     done 
