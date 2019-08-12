@@ -34,43 +34,46 @@ function finish {
 }
 trap finish EXIT
 
-function osd_cat_br {
+function osd_cat_br(){
     #writes to the bottom right of the screen and includes the PID.
     #osd_cat needs something piped to it-- we can't pipe directly to a function
     #so first the data needs to be read.
+    color=$1
+    echo $color
     while read data; do
-        echo "$data" | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-4 -i -10 -d 1 -O 2 &
-        echo PID:$$ | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-* --offset=50 -i -6 -d 1 -O 2 &
-        #echo "$data" | osd_cat --pos=bottom --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-250 -d 1 &
-        #echo PID:$$ | osd_cat --pos=bottom --align=right --font=-*-helvetica-bold-r-*-*-15-*-*-*-*-*-*-* --offset=-10 -d 1 &
+        #echo "$data" | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-4 -i -10 -d 1 -O 2 &
+        #echo PID:$$ | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-* --offset=50 -i -6 -d 1 -O 2 &
+        echo "$data" | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-4 -i -10 -d 1 -O 2 -c $color &
+        echo PID:$$ | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-* --offset=50 -i -6 -d 1 -O 2 -c $color &
     done 
 }
 
-function print_countdown {
+function print_countdown(){
+        color=$3
         if (($1 < 10)) && (($2 < 10))
         then
-        echo 0$1:0$2 | osd_cat_br
+        echo 0$1:0$2 | osd_cat_br $color
         elif (($1 < 10))
         then
-        echo 0$1:$2 | osd_cat_br
+        echo 0$1:$2 | osd_cat_br $color
         elif (($2 < 10))
         then
-        echo $1:0$2 | osd_cat_br
+        echo $1:0$2 | osd_cat_br $color
         else 
-        echo $1:$2 | osd_cat_br
+        echo $1:$2 | osd_cat_br $color
         fi
         sleep 1
 }
 
 #/home/aaron/scripts/flashy_bullshit -m 'STUDY TIME!'
-print_countdown $MINUTES 0
+print_countdown $MINUTES 0 red
 for i in `seq 0 $(($MINUTES - 1))`;
 do
         for j in `seq 0 59`
         do
             mins=$(expr $(($MINUTES - 1)) - $i)
             secs=$(expr 59 - $j)
-            print_countdown $mins $secs
+            print_countdown $mins $secs red
         done
 done    
 
@@ -80,14 +83,14 @@ do
         sleep 2
 done
 
-print_countdown 5 0
+print_countdown 5 0 green
 for l in `seq 0 4`
 do
     for m in `seq 0 59`
     do
         mins=$(expr 4 - $l)
         secs=$(expr 59 - $m)
-        print_countdown $mins $secs
+        print_countdown $mins $secs green
     done
 done
 
