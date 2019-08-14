@@ -143,6 +143,10 @@ Mod4 + Shift + q
 "sleep .1; bash /home/aaron/scripts/pomodoro.sh &"
 Mod4 + BackSpace
 
+#long pomodoro hotkey
+"sleep .1; bash /home/aaron/scripts/pomodoro.sh -m 50 &"
+Alt + Mod4 + BackSpace
+
 #what are you working on?
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/goalbanner.sh"
 Mod4 + Shift + BackSpace

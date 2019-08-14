@@ -79,16 +79,21 @@ done
 
 for k in `seq 1 5`;
 do
-        echo TAKE A BREAK. | osd_cat --pos=middle --align=center --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-100 -d 1 &
+        echo TAKE A BREAK. | osd_cat --pos=middle --align=center --color=green --font=-*-helvetica-bold-r-*-*-100-*-*-*-*-*-*-* --outline=4 --offset=-100 -d 1 &
         sleep 2
 done
 
-print_countdown 5 0 green
-for l in `seq 0 4`
+BREAK=$(expr $MINUTES / 5)
+BREAKSUBONE=$(expr $BREAK - 1)
+
+#print_countdown 5 0 green
+print_countdown $BREAK 0 green
+for l in `seq 0 $BREAKSUBONE`
 do
     for m in `seq 0 59`
     do
-        mins=$(expr 4 - $l)
+        #mins=$(expr 4 - $l)
+        mins=$BREAKSUBONE
         secs=$(expr 59 - $m)
         print_countdown $mins $secs green
     done
