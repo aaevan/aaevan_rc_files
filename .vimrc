@@ -58,6 +58,10 @@ nnoremap N Nzzzv
 nnoremap H ^
 nnoremap L g_
 
+" Make , repeat the last single line find (;)
+" and repeat the last command (.)
+noremap , ;.
+
 " split line with S
 nnoremap S i<cr><esc><right>
 
