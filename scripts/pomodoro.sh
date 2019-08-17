@@ -41,8 +41,6 @@ function osd_cat_br(){
     color=$1
     echo $color
     while read data; do
-        #echo "$data" | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-4 -i -10 -d 1 -O 2 &
-        #echo PID:$$ | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-* --offset=50 -i -6 -d 1 -O 2 &
         echo "$data" | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-4 -i -10 -d 1 -O 2 -c $color &
         echo PID:$$ | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-* --offset=50 -i -6 -d 1 -O 2 -c $color &
     done 
@@ -86,7 +84,6 @@ done
 BREAK=$(expr $MINUTES / 5)
 BREAKSUBONE=$(expr $BREAK - 1)
 
-#print_countdown 5 0 green
 print_countdown $BREAK 0 green
 for l in `seq 0 $BREAKSUBONE`
 do

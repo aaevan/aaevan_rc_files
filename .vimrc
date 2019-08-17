@@ -33,6 +33,7 @@ set softtabstop=4 " number of spaces in tab when editing
 set expandtab     " tabs are spaces
 
 set number        " shows line numbers
+set numberwidth=3 " line numbers take up less space
 set showcmd       " show command in bottom right
 set cursorline    " highlight current line
 set wildmenu      " visual autocomplete menu, press tab to cycle through options
