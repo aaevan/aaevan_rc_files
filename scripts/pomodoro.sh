@@ -81,6 +81,7 @@ do
         sleep 2
 done
 
+#Break is a fifth the length of the pomodoro interval.
 BREAK=$(expr $MINUTES / 5)
 BREAKSUBONE=$(expr $BREAK - 1)
 
