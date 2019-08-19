@@ -22,9 +22,6 @@ Mod4 + h
 "xfce4-terminal --hide-menubar -e alsamixer"
 Mod4 + m
 
-"pavucontrol"
-Mod4 + Shift + m
-
 "google-chrome"
 Mod4 + f
 
