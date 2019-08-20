@@ -168,6 +168,9 @@ bar {
         mode hide
         hidden_state hide
         modifier Mod1
+    colors {
+        background #111111
+    }
 }
 
 hide_edge_borders both
@@ -191,7 +194,7 @@ client.unfocused            $bg        $bg         $ia
 client.focused_inactive     $bg        $bg         $ac
 client.urgent               $rd        $rd         $tx
 
-exec --no-startup-id xsetroot -solid "#080808"
+exec --no-startup-id xsetroot -solid "#000000"
 exec xbindkeys
 exec arbtt-capture
 exec nm-applet

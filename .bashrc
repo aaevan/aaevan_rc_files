@@ -124,6 +124,8 @@ fi
 
 alias lgrep='ls | grep'
 alias hgrep='history | grep'
+alias lr='reset; la'
+alias lsr='reset; ls'
 
 export PATH=~/anaconda3/bin:$PATH
 
