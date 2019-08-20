@@ -191,7 +191,7 @@ client.unfocused            $bg        $bg         $ia
 client.focused_inactive     $bg        $bg         $ac
 client.urgent               $rd        $rd         $tx
 
-exec --no-startup-id xsetroot -solid "#333333"
+exec --no-startup-id xsetroot -solid "#080808"
 exec xbindkeys
 exec arbtt-capture
 exec nm-applet
