@@ -172,10 +172,6 @@ Mod4 + shift + s
 "/home/aaron/.screenlayout/default.sh"
 Mod4 + shift + d
 
-#typing test
-"google-chrome https://10fastfingers.com/typing-test/english"
-Mod4 + shift + 1
-
 #spotify previous song
 "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 Mod4 + Left
