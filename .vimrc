@@ -74,6 +74,8 @@ nnoremap <leader>ww mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 :command Wq wq
 :command W w
 :command Q q
+:command Q! q!
+:command E e
 
 inoremap <Up>     <NOP>
 inoremap <Down>   <NOP>
