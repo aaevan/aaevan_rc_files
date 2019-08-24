@@ -85,6 +85,9 @@ noremap  <Down>   <NOP>
 noremap  <Left>   <NOP>
 noremap  <Right>  <NOP>
 
+noremap <Left> <Home>
+noremap <Right> <End>
+
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
 :set guioptions-=r  "remove right-hand scroll bar
