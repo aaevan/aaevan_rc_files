@@ -152,10 +152,6 @@ Mod4 + Shift + BackSpace
 "google-chrome https://youtu.be/Ss0kFNUP4P4?t=1m11s"
 Mod4 + Shift + l
 
-#daily CL searches:
-#"google-chrome https://boston.craigslist.org/search/jjj?query=-marketing+-cook+-restaurant+-landscape+-CDL; google-chrome https://boston.craigslist.org/search/hhh?query=november&hasPic=1&postedToday=1&max_price=750&availabilityMode=0"
-#Mod4 + j
-
 #ping google 3 times.
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/findmnt_wrapper.sh"
 Mod4 + d
