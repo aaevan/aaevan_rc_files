@@ -75,12 +75,12 @@ Shift + XF86AudioRaiseVolume
 Shift + XF86AudioLowerVolume
 
 #volume mute
-"amixer -D pulse sset Master mute"
-XF86AudioMute
+#"amixer -D pulse sset Master mute"
+#XF86AudioMute
 
 #volume unmute
-"amixer -D pulse sset Master unmute"
-XF86AudioMute + Shift
+#"amixer -D pulse sset Master unmute"
+#XF86AudioMute + Shift
 
 "xfce4-terminal --hide-menubar -e python3"
 Mod4 + Shift + P
@@ -99,14 +99,6 @@ Mod4 + Shift + f
 #rick astley
 "google-chrome https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 Mod4 + 8
-
-#scan wireless network for other hosts
-"xfce4-terminal --hide-menubar -e /home/aaron/scripts/network_scan.sh"
-Mod4 + Shift + h
-
-#devdiff
-"xfce4-terminal --hide-menubar -e /home/aaron/scripts/devdiff"
-Mod4 + 1
 
 #gen.lib.rus.ec
 "google-chrome gen.lib.rus.ec"
