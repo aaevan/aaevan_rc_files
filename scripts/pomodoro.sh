@@ -90,8 +90,8 @@ for l in `seq 0 $BREAKSUBONE`
 do
     for m in `seq 0 59`
     do
-        #mins=$(expr 4 - $l)
-        mins=$BREAKSUBONE
+        mins=$(expr 4 - $l)
+        #mins=$BREAKSUBONE
         secs=$(expr 59 - $m)
         print_countdown $mins $secs green
     done
