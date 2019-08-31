@@ -205,11 +205,9 @@ Mod4 + 6
 Mod4 + Shift + e
 
 #down key x15
-#"~/scripts/downkeyer.py"
 "sleep .1; bash /home/aaron/scripts/multi_keyer.sh Down 50 15 &"
 Mod4 + Down
 
 #up key x15
-#"~/scripts/downkeyer.py"
 "sleep .1; bash /home/aaron/scripts/multi_keyer.sh Up 50 15 &"
 Mod4 + Up
