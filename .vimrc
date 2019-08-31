@@ -42,7 +42,7 @@ set incsearch     " search as characters are entered
 set hlsearch      " highlight matches
 set encoding=utf-8  "everything's in unicode now!
 set list          "print trailing characters
-set listchars=tab:▸\ ,eol:¬ "print a little character at the end of each line
+set listchars=tab:▸\ ,eol:¬ "print a character at the end of each line
 
 "move vertically by visual line (for long lines)
 nnoremap j gj
@@ -52,8 +52,8 @@ nnoremap k gk
 nnoremap gV `[v`] 
 
 " make next and previous searches center the view on the new item
-nnoremap n nzzzv
-nnoremap N Nzzzv
+"nnoremap n nzzzv
+"nnoremap N Nzzzv
 
 " Make N and L go to the beginning and ends of a line easily
 nnoremap H ^
