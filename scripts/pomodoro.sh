@@ -63,7 +63,6 @@ function print_countdown(){
         sleep 1
 }
 
-#/home/aaron/scripts/flashy_bullshit -m 'STUDY TIME!'
 print_countdown $MINUTES 0 red
 for i in `seq 0 $(($MINUTES - 1))`;
 do
