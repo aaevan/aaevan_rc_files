@@ -1,6 +1,4 @@
 #!/bin/bash
-
-    #configured for a 1280x800 screen
     echo "AGAIN?"| osd_cat --pos=middle --align=center --font=-*-helvetica-bold-r-*-*-300-*-*-*-*-*-*-* --offset=-600 --color=red -d 100 &
 read -p " " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
