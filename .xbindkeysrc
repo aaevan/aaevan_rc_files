@@ -211,3 +211,7 @@ Mod4 + Down
 #up key x15
 "sleep .1; bash /home/aaron/scripts/multi_keyer.sh Up 50 15 &"
 Mod4 + Up
+
+#open projects folder
+"nautilus ~/projects/"
+Mod4 + Alt + p
