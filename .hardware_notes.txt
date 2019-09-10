@@ -1,0 +1,3 @@
+T440p:
+enable backlight:
+https://askubuntu.com/questions/468277/screen-brightness-isnt-taking-effect-on-a-lenovo-z570
