@@ -52,8 +52,8 @@ nnoremap k gk
 nnoremap gV `[v`] 
 
 " make next and previous searches center the view on the new item
-"nnoremap n nzzzv
-"nnoremap N Nzzzv
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
 " Make N and L go to the beginning and ends of a line easily
 nnoremap H ^
