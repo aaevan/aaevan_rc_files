@@ -39,10 +39,6 @@ Mod4 + Shift + v
 "gvim /home/aaron/notes/note_$(date '+%m-%d-%y_%H-%M-%S').txt"
 Mod4 + Shift + n
 
-#list of things that I want to be doing
-"gvim /home/aaron/todo.txt"
-Mod4 + Shift + t
-
 #push changes to config files to git
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/push_rcs_to_git.sh"
 Mod4 + Shift + r
