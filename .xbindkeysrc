@@ -180,6 +180,9 @@ Alt+Mod4 + d
 "~/scripts/flashy_bullshit -m 'FUCK YEAH!'"
 Mod4 + Shift + 2
 
+"~/scripts/flashy_bullshit -m 'NOPE NOPE NOPE'"
+Mod4 + Shift + 3
+
 #open spotify
 "spotify"
 Mod4 + backslash
