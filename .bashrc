@@ -150,3 +150,5 @@ unset __conda_setup
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
+
+bind TAB:menu-complete
