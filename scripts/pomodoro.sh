@@ -37,7 +37,6 @@ trap finish EXIT
 function osd_cat_br(){
     #writes to the bottom right of the screen and includes the PID.
     #osd_cat needs something piped to it-- we can't pipe directly to a function
-    #so first the data needs to be read.
     color=$1
     echo $color
     while read data; do
