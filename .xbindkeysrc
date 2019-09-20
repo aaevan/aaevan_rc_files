@@ -214,3 +214,7 @@ Mod4 + Up
 #open projects folder
 "nautilus ~/projects/"
 Mod4 + Alt + p
+
+#xrandr-invert-colors
+"xrandr-invert-colors"
+Mod4 + i
