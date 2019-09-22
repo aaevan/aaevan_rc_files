@@ -4,6 +4,7 @@ MINUTES=25
 SECONDS=0
 WILL_BREAK=1
 
+#handle arguments:
 while getopts ":m:s:b:" opt; do
   case $opt in
     m)
