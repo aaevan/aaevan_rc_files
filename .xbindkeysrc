@@ -22,8 +22,8 @@ Mod4 + m
 "google-chrome"
 Mod4 + f
 
-#open rss feeds
-"google-chrome https://www.commafeed.com/#/feeds/view/category/all"
+#open workflowy
+"google-chrome workflowy.com"
 Mod4 + w
 
 "google-chrome calendar.google.com"
