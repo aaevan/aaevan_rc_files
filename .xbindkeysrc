@@ -2,7 +2,7 @@
 Mod4 + v
 
 "gvim /home/aaron/.xbindkeysrc"
-Mod4 + k
+Mod4 + shift + k
 
 "gvim /home/aaron/.bashrc"
 Mod4 + b
@@ -218,3 +218,7 @@ Mod4 + Alt + p
 #xrandr-invert-colors
 "xrandr-invert-colors"
 Mod4 + i
+
+#open codewars
+"google-chrome https://www.codewars.com/kata/"
+Mod4 + k
