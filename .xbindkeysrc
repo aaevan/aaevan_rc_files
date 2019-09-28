@@ -81,10 +81,6 @@ Mod4 + Shift + P
 "nautilus"
 Mod4 + n
 
-#Crawl Webtiles
-"google-chrome http://crawl.akrasiac.org:8080/#lobby"
-Mod4 + Shift + w
-
 #weather
 "google-chrome https://forecast.weather.gov/MapClick.php?lat=42.38675000000006&lon=-71.09844999999996"
 Mod4 + Shift + f
