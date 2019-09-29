@@ -187,7 +187,7 @@ Alt + Mod4 + a
 "google-chrome https://ankiuser.net/edit/"
 Alt + Mod4 + q
 
-#open jupyter notebook
+#ergodox layout cheatsheet
 "pqiv -fti ~/scripts/ergodox_layout.png"
 Mod4 + 6
 
