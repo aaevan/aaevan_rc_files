@@ -5,6 +5,7 @@
 
 x_size=1600
 y_size=900
+warning="NOPE"
 
 while true; do
     matches=$(wmctrl -l | grep -wif words.txt |wc -l)
@@ -14,9 +15,9 @@ while true; do
     then
         indent=$(($RANDOM%$x_size-100)) #indent is the x axis
         offset=$(($RANDOM%$y_size-30))  #offset is the y axis
-        rand_size=$(($RANDOM%200+50))
-        font_string="-*-helvetica-bold-r-*-*-$rand_size-*-*-*-*-*-*-*"
-        echo "NOPE" | osd_cat --pos=top --align=right --font=$font_string --offset=$offset -i $indent -d 1 -O 2 -c red &
+        rand_size=$(($RANDOM%200+50)) #pick a random font size from 50 to 250
+        font_string="-*-helvetica-bold-r-*-*-$rand_size-*-*-*-*-*-*-*" 
+        echo $warning | osd_cat --pos=top --align=right --font=$font_string --offset=$offset -i $indent -d 1 -O 2 -c red &
     fi
     sleep .05
 done
