@@ -88,6 +88,12 @@ noremap  <Right>  <NOP>
 noremap <Left> <Home>
 noremap <Right> <End>
 
+"credit: https://www.hillelwayne.com/post/intermediate-vim/
+"unmap ex mode binding:
+noremap Q @@
+"delete without clobbering unamed register:
+noremap s "_d
+
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
 :set guioptions-=r  "remove right-hand scroll bar
