@@ -198,4 +198,3 @@ exec --no-startup-id xsetroot -solid "#000000"
 exec xbindkeys
 exec arbtt-capture
 exec nm-applet
-exec fluxgui
