@@ -40,7 +40,6 @@ function osd_cat_br(){
     #includes the PID below the time readout for easily killing the process.
     #osd_cat needs something piped to it-- we can't pipe directly to a function
     color=$1
-    echo $color
     while read data; do
         echo "$data" | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-4 -i -10 -d 1 -O 2 -c $color &
         echo PID:$$ | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-* --offset=50 -i -6 -d 1 -O 2 -c $color &
@@ -64,7 +63,12 @@ function print_countdown(){
         sleep 1
 }
 
+#Break duration is a fifth the length of the pomodoro interval.
+BREAK=$(expr $MINUTES / 5)
+BREAKSUBONE=$(expr $BREAK - 1)
+
 print_countdown $MINUTES 0 red
+echo "Starting timer for $MINUTES minutes followed by a $BREAK minute break."
 for i in `seq 0 $(($MINUTES - 1))`;
 do
         for j in `seq 0 59`
@@ -74,17 +78,14 @@ do
             print_countdown $mins $secs red
         done
 done    
-
+#flash TAKE A BREAK five times:
 for k in `seq 1 5`;
 do
         echo TAKE A BREAK. | osd_cat --pos=middle --align=center --color=green --font=-*-helvetica-bold-r-*-*-100-*-*-*-*-*-*-* --outline=4 --offset=-100 -d 1 &
         sleep 2
 done
 
-#Break is a fifth the length of the pomodoro interval.
-BREAK=$(expr $MINUTES / 5)
-BREAKSUBONE=$(expr $BREAK - 1)
-
+#start the countdown timer:
 print_countdown $BREAK 0 green
 for l in `seq 0 $BREAKSUBONE`
 do
@@ -98,13 +99,13 @@ done
 
 if [ $WILL_BREAK -eq 1 ];
     then
+    echo AGAIN? | osd_cat --pos=middle --align=center --color=red --font=-*-helvetica-bold-r-*-*-100-*-*-*-*-*-*-* --outline=4 --offset=-100 -d 999 &
     if zenity --question --text="Again?";
         then
-        ~/scripts/pomodoro.sh & 
+        killall osd_cat
+        ~/scripts/pomodoro.sh -m $MINUTES -s $SECONDS -b $WILL_BREAK & 
         else
+        killall osd_cat
         exit
     fi
 fi
-
-
-
