@@ -198,3 +198,4 @@ exec --no-startup-id xsetroot -solid "#000000"
 exec xbindkeys
 exec arbtt-capture
 exec nm-applet
+exec /home/aaron/scripts/nope_blacklist.sh &

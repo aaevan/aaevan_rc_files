@@ -9,8 +9,8 @@ warning="NOPE"
 
 while true; do
     matches=$(wmctrl -l | grep -wif words.txt |wc -l)
-    echo $(wmctrl -l | grep -wif words.txt)
-    echo $matches
+    #echo $(wmctrl -l | grep -wif words.txt)
+    #echo $matches
     if [ "$matches" -ge "1" ]
     then
         indent=$(($RANDOM%$x_size-100)) #indent is the x axis
