@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#example blacklist: minecraft, akrasiac, terraria,
-#if a word is matched, print NOPE all over the screen with osd_cat until the offending process changes its name.
+#if a word is matched from words.txt, print NOPE all over the screen with osd_cat until the offending process changes its name.
 
+#change the below lines to your screen resolution:
 x_size=1600
 y_size=900
 warning="NOPE"

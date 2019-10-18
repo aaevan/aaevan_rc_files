@@ -1,4 +1,4 @@
- #!/bin/bash
+#!/bin/bash
 
 MINUTES=25
 SECONDS=0
