@@ -39,7 +39,6 @@ cmd = r'echo {} | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*
 x_size, y_size = 1600, 900
 x_offset, y_offset = -5, -41
 
-"""
 while True:
     sleep(1)
     for i in range(0, 1000, 4):
@@ -50,4 +49,3 @@ while True:
         args = (print_string, rand_y % 900 + y_offset, rand_x, random_rgb())
         returned_value = subprocess.call(cmd.format(*args), shell=True)
         sleep(.005)
-"""
