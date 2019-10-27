@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#define default values:
 MINUTES=25
 SECONDS=0
 WILL_BREAK=1
@@ -38,7 +39,7 @@ trap finish EXIT
 function osd_cat_br(){
     #writes to the top right of the screen.
     #includes the PID below the time readout for easily killing the process.
-    #osd_cat needs something piped to it-- we can't pipe directly to a function
+    #osd_cat needs something piped to it. osd_cat accepts raw text from cat
     color=$1
     while read data; do
         echo "$data" | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-4 -i -10 -d 1 -O 2 -c $color &
