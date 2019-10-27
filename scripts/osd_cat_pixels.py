@@ -31,7 +31,6 @@ def print_image(input_image, duration=999, scaling=9, coords=(100, 100),
                 continue
             x_print, y_print = (x_val * scaling) + coords[0], (y_val * scaling) + coords[1]
             args = ('.', x_print, y_print, duration, rgb_to_hex(r, g, b))
-            #args = ('.', x_print, y_print, duration, random_rgb())
             if shuffle_order:
                 calls.append(cmd.format(*args))
             else:
