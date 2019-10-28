@@ -68,7 +68,7 @@ function print_countdown(){
 BREAK=$(expr $MINUTES / 5)
 BREAKSUBONE=$(expr $BREAK - 1)
 
-echo BEGIN! | osd_cat --pos=middle --align=center --color=GREEN --font=-*-helvetica-bold-r-*-*-100-*-*-*-*-*-*-* --outline=4 --offset=-100 -d 3 &
+echo BEGIN! | osd_cat --pos=middle --align=center --color=GREEN --font=-*-helvetica-bold-r-*-*-100-*-*-*-*-*-*-* --outline=4 --offset=-100 -d 2 &
 print_countdown $MINUTES 0 red
 echo "Starting timer for $MINUTES minutes followed by a $BREAK minute break."
 for i in `seq 0 $(($MINUTES - 1))`;
