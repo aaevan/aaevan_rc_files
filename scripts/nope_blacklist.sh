@@ -9,10 +9,10 @@ warning="NOPE"
 
 while true; do
     matches=$(wmctrl -l | grep -wif words.txt |wc -l)
-    echo $(wmctrl -l | grep -wif words.txt)
-    #echo $matches
     if [ "$matches" -ge "1" ]
+    #if [[ $matches =~ ^\ +$ ]] #if matches has non-whitespace characters
     then
+        echo $matches $(wmctrl -l | grep -wif words.txt)
         indent=$(($RANDOM%$x_size-100)) #indent is the x axis
         offset=$(($RANDOM%$y_size-30))  #offset is the y axis
         rand_size=$(($RANDOM%200+50)) #pick a random font size from 50 to 250
