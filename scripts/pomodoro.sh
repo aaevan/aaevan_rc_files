@@ -38,7 +38,8 @@ trap finish EXIT
 
 function osd_cat_br(){
     #writes to the top right of the screen.
-    #includes the PID below the time readout for easily killing the process.
+    #The second line includes <pomodoro minutes>/<break minutes> followed by
+    #the PID below the time readout for easily killing the process.
     #osd_cat needs something piped to it. osd_cat accepts raw text from cat
     color=$1
     while read data; do
