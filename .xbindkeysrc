@@ -93,6 +93,10 @@ Mod4 + Shift + g
 "/home/aaron/scripts/area_screen.sh"
 Mod4 + 0
 
+#take an area screenshot
+"/home/aaron/scripts/ankify_screenhot.sh"
+Mod4 + Shift + 0
+
 #morning brain note
 "gvim /home/aaron/notes/morningbrain_$(date '+%m-%d-%y_%H-%M-%S').txt"
 Mod4 + Shift + b
