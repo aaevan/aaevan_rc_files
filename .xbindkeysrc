@@ -94,7 +94,7 @@ Mod4 + Shift + g
 Mod4 + 0
 
 #take an area screenshot
-"/home/aaron/scripts/ankify_screenhot.sh"
+"/home/aaron/scripts/ankify_screenshot.sh"
 Mod4 + Shift + 0
 
 #morning brain note
