@@ -19,6 +19,9 @@ Mod4 + h
 "xfce4-terminal --hide-menubar -e 'alsamixer -c 1'"
 Mod4 + m
 
+"/home/aaron/scripts/muteall.sh"
+Mod4 + slash
+
 "google-chrome"
 Mod4 + f
 
