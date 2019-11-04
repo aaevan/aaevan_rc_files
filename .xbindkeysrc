@@ -16,7 +16,7 @@ Mod4 + r
 "xfce4-terminal --hide-menubar -e htop"
 Mod4 + h
 
-"xfce4-terminal --hide-menubar -e alsamixer"
+"xfce4-terminal --hide-menubar -e 'alsamixer -c 1'"
 Mod4 + m
 
 "google-chrome"
