@@ -221,3 +221,7 @@ Mod4 + i
 #open codewars
 "google-chrome https://www.codewars.com/kata/"
 Mod4 + k
+
+#insert most recent ankified image
+"sleep 1; bash /home/aaron/scripts/ankify_image.sh&"
+Mod4 + 1
