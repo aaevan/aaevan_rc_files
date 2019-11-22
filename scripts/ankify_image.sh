@@ -1,7 +1,8 @@
 #f3 --> tab * 9 --> space --> enter
 delay=10
-xdotool keydown --delay $delay Return
-xdotool keyup --delay $delay Return
+#uncomment these two lines to add an extra return before:
+#xdotool keydown --delay $delay Return 
+#xdotool keyup --delay $delay Return
 xdotool keydown --delay $delay F3
 xdotool keyup --delay $delay F3
 for i in $(seq 1 9)
