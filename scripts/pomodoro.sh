@@ -81,8 +81,8 @@ do
             print_countdown $mins $secs red
         done
 done    
-#flash TAKE A BREAK five times:
-for k in `seq 1 5`;
+#flash TAKE A BREAK four times:
+for k in `seq 1 4`;
 do
         echo TAKE A BREAK. | osd_cat --pos=middle --align=center --color=green --font=-*-helvetica-bold-r-*-*-100-*-*-*-*-*-*-* --outline=4 --offset=-100 -d 1 &
         sleep 2
