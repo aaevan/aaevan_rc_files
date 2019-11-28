@@ -5,6 +5,14 @@ MINUTES=25
 SECONDS=0
 WILL_BREAK=1
 
+counter_font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-*
+info_font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
+big_font=-*-helvetica-bold-r-*-*-100-*-*-*-*-*-*-*
+info_string=$MINUTES\ /\ $BREAK\ \|\ PID:$$ 
+
+begin_color=#00ff00
+break_color=#00ff00
+
 #handle arguments:
 while getopts ":m:s:b:" opt; do
   case $opt in
@@ -43,8 +51,8 @@ function osd_cat_br(){
     #osd_cat needs something piped to it. osd_cat accepts raw text from cat
     color=$1
     while read data; do
-        echo "$data" | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-4 -i -10 -d 1 -O 2 -c $color &
-        echo $MINUTES\ /\ $BREAK\ \|\ PID:$$ | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-* --offset=50 -i -6 -d 1 -O 2 -c $color &
+        echo $data | osd_cat --pos=top --align=right --font=$counter_font --offset=-4 -i -10 -d 1 -O 2 -c $color &
+        echo $info_string | osd_cat --pos=top --align=right --font=$info_font --offset=50 -i -6 -d 1 -O 2 -c $color &
     done 
 }
 
@@ -69,7 +77,7 @@ function print_countdown(){
 BREAK=$(expr $MINUTES / 5)
 BREAKSUBONE=$(expr $BREAK - 1)
 
-echo BEGIN! | osd_cat --pos=middle --align=center --color=GREEN --font=-*-helvetica-bold-r-*-*-100-*-*-*-*-*-*-* --outline=4 --offset=-100 -d 2 &
+echo BEGIN! | osd_cat --pos=middle --align=center --color=#00ff00 --font=$big_font --outline=4 --offset=-100 -d 2 &
 print_countdown $MINUTES 0 red
 echo "Starting timer for $MINUTES minutes followed by a $BREAK minute break."
 for i in `seq 0 $(($MINUTES - 1))`;
@@ -84,7 +92,7 @@ done
 #flash TAKE A BREAK four times:
 for k in `seq 1 4`;
 do
-        echo TAKE A BREAK. | osd_cat --pos=middle --align=center --color=green --font=-*-helvetica-bold-r-*-*-100-*-*-*-*-*-*-* --outline=4 --offset=-100 -d 1 &
+        echo TAKE A BREAK. | osd_cat --pos=middle --align=center --color=green --font=big_font --outline=4 --offset=-100 -d 1 &
         sleep 2
 done
 
@@ -102,7 +110,7 @@ done
 
 if [ $WILL_BREAK -eq 1 ];
     then
-    echo AGAIN? | osd_cat --pos=middle --align=center --color=red --font=-*-helvetica-bold-r-*-*-100-*-*-*-*-*-*-* --outline=4 --offset=-100 -d 999 &
+    echo AGAIN? | osd_cat --pos=middle --align=center --color=red --font=big_font --outline=4 --offset=-100 -d 999 &
     if zenity --question --text="Again?";
         then
         killall osd_cat

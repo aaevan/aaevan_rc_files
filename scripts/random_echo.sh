@@ -1,7 +1,35 @@
 #!/bin/bash
 
-MINUTES=20
-BREAK=1
+#define default values:
+MINUTES=25
+SECONDS=0
+WILL_BREAK=1
+
+#handle arguments:
+while getopts ":m:s:b:" opt; do
+  case $opt in
+    m)
+      echo "-m was triggered, Parameter: $OPTARG" >&2
+      MINUTES=$OPTARG
+      ;;
+    s)
+      echo "-s was triggered, Parameter: $OPTARG" >&2
+      SECONDS=$OPTARG
+      ;;
+    b)
+      echo "-b was triggered, Parameter: $OPTARG" >&2
+      WILL_BREAK=$OPTARG
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
 
 function echo_countdown(){
         if (($1 < 10)) && (($2 < 10))
@@ -40,15 +68,4 @@ done
 #done
 
 
-function osd_cat_br(){
-    #writes to the top right of the screen.
-    #The second line includes <pomodoro minutes>/<break minutes> followed by
-    #the PID is displayed below the time readout for easily killing the process.
-    #osd_cat needs something piped to it. osd_cat accepts raw text from cat
-    color=$1
-    while read data; do
-        echo "$data" | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-4 -i -10 -d 1 -O 2 -c $color &
-        echo $MINUTES\ /\ $BREAK\ \|\ PID:$$ | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-* --offset=50 -i -6 -d 1 -O 2 -c $color &
-    done 
-}
 
