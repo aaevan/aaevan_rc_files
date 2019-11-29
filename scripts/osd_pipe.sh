@@ -1,26 +1,44 @@
+#!/bin/bash
+
+#define default values:
 MINUTES=25
-BREAK=5
+SECONDS=0
+WILL_BREAK=1
 color=red
 
-function osd_cat_br(){
-    #writes to the top right of the screen.
-    #The second line includes <pomodoro minutes>/<break minutes> followed by
-    #the PID is displayed below the time readout for easily killing the process.
-    #osd_cat needs something piped to it. osd_cat accepts raw text from cat
-    color=$1
-    #while read data; do
-    #echo "$data" | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-4 -i -10 -d 1 -O 2 -c $color &
-    #echo $MINUTES\ /\ $BREAK\ \|\ PID:$$ | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-* --offset=50 -i -6 -d 1 -O 2 -c $color &
-    #done 
-}
+counter_font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-*
+info_font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
+
+#handle arguments:
+while getopts ":m:s:b:" opt; do
+  case $opt in
+    m)
+      echo "-m was triggered, Parameter: $OPTARG" >&2
+      MINUTES=$OPTARG
+      ;;
+    s)
+      echo "-s was triggered, Parameter: $OPTARG" >&2
+      SECONDS=$OPTARG
+      ;;
+    b)
+      echo "-b was triggered, Parameter: $OPTARG" >&2
+      WILL_BREAK=$OPTARG
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
 
 pipe_name=/tmp/osd_cat_pipe
 mkfifo $pipe_name
 
 /home/aaron/scripts/random_echo.sh > $pipe_name &
 
-#osd_cat --pos=middle --align=center --color=red --font=-*-helvetica-bold-r-*-*-100-*-*-*-*-*-*-* --outline=4 --offset=-100 -d 2 -l 1 $pipe_name &
-osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=-4 -i -10 -d 1 -O 2 -c $color -l 1 $pipe_name &
-#osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-* --offset=50 -i -6 -d 1 -O 2 -c $color &
-echo $MINUTES\ /\ $BREAK\ \|\ PID:$$ | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-* --offset=50 -i -6 -d 10 -O 2 -c $color &
-osd_cat_br
+osd_cat --pos=top --align=right --font=counter_font --offset=-4 -i -10 -d 1 -O 2 -c $color -l 1 $pipe_name &
+echo $MINUTES\ /\ $BREAK\ \|\ PID:$$ | osd_cat --pos=top --align=right --font=info_font --offset=50 -i -6 -d 10 -O 2 -c $color &

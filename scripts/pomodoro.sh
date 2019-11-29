@@ -10,9 +10,6 @@ info_font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
 big_font=-*-helvetica-bold-r-*-*-100-*-*-*-*-*-*-*
 info_string=$MINUTES\ /\ $BREAK\ \|\ PID:$$ 
 
-begin_color=#00ff00
-break_color=#00ff00
-
 #handle arguments:
 while getopts ":m:s:b:" opt; do
   case $opt in
