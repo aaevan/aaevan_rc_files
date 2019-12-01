@@ -34,15 +34,15 @@ done
 function echo_countdown(){
         if (($1 < 10)) && (($2 < 10))
         then
-        echo 0$1:0$2 #| osd_cat_br $color
+        echo 0$1:0$2
         elif (($1 < 10))
         then
-        echo 0$1:$2 #| osd_cat_br $color
+        echo 0$1:$2
         elif (($2 < 10))
         then
-        echo $1:0$2 #| osd_cat_br $color
+        echo $1:0$2
         else 
-        echo $1:$2 #| osd_cat_br $color
+        echo $1:$2
         fi
         sleep .1
 }
