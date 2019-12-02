@@ -89,7 +89,7 @@ done
 #flash TAKE A BREAK four times:
 for k in `seq 1 4`;
 do
-        echo TAKE A BREAK. | osd_cat --pos=middle --align=center --color=green --font=big_font --outline=4 --offset=-100 -d 1 &
+        echo TAKE A BREAK. | osd_cat --pos=middle --align=center --color=green --font=$big_font --outline=4 --offset=-100 -d 1 &
         sleep 2
 done
 
@@ -107,7 +107,7 @@ done
 
 if [ $WILL_BREAK -eq 1 ];
     then
-    echo AGAIN? | osd_cat --pos=middle --align=center --color=red --font=big_font --outline=4 --offset=-100 -d 999 &
+    echo AGAIN? | osd_cat --pos=middle --align=center --color=red --font=$big_font --outline=4 --offset=-100 -d 999 &
     if zenity --question --text="Again?";
         then
         killall osd_cat
