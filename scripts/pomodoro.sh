@@ -1,6 +1,4 @@
 #!/bin/bash
-
-#define default values:
 MINUTES=25
 SECONDS=0
 WILL_BREAK=1
@@ -100,6 +98,7 @@ do
             print_countdown $mins $secs red
         done
 done    
+
 #flash TAKE A BREAK four times:
 for k in `seq 1 4`;
 do
