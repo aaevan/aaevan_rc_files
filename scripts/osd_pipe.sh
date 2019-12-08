@@ -36,7 +36,7 @@ done
 pipe_name=/tmp/osd_cat_pipe
 mkfifo $pipe_name
 
-/home/aaron/scripts/random_echo.sh > $pipe_name &
+/home/aaron/scripts/random_echo.sh -m $minutes > $pipe_name &
 
 info_duration=$(expr $MINUTES * 60)
 
