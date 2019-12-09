@@ -6,6 +6,10 @@ WILL_BREAK=1
 counter_font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-*
 info_font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
 big_font=-*-helvetica-bold-r-*-*-100-*-*-*-*-*-*-*
+info_duration=$(($MINUTES * 60))
+#Break duration is a fifth the length of the pomodoro interval.
+BREAK=$(expr $MINUTES / 5)
+BREAKSUBONE=$(expr $BREAK - 1)
 info_string=$MINUTES\ /\ $BREAK\ \|\ PID:$$ 
 
 #handle arguments:
@@ -51,38 +55,23 @@ function osd_cat_br(){
     done 
 }
 
-pipe_name=/tmp/osd_cat_pipe
-mkfifo $pipe_name
-
 function print_countdown(){
         color=$3
         if (($1 < 10)) && (($2 < 10))
         then
         echo 0$1:0$2 | osd_cat_br $color
-        #echo 0$1:0$2 > $pipe_name
         elif (($1 < 10))
         then
         echo 0$1:$2 | osd_cat_br $color
-        #echo 0$1:$2 > $pipe_name
         elif (($2 < 10))
         then
         echo $1:0$2 | osd_cat_br $color
-        #echo $1:0$2 > $pipe_name
         else 
         echo $1:$2 | osd_cat_br $color
-        #echo $1:$2 > $pipe_name
         fi
         sleep 1
 }
 
-info_duration=$(($MINUTES * 60))
-#Break duration is a fifth the length of the pomodoro interval.
-BREAK=$(expr $MINUTES / 5)
-BREAKSUBONE=$(expr $BREAK - 1)
-
-#TESTING:
-#osd_cat --pos=top --align=right --font=counter_font --offset=-4 -i -10 -d 1 -O 2 -c $color -l 1 $pipe_name &
-#echo $MINUTES\ /\ $BREAK\ \|\ PID:$$ | osd_cat --pos=top --align=right --font=info_font --offset=50 -i -6 -d $info_duration -O 2 -c $color &
 
 echo BEGIN! | osd_cat --pos=middle --align=center --color=#00ff00 --font=$big_font --outline=4 --offset=-100 -d 2 &
 
