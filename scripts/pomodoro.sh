@@ -7,6 +7,7 @@ counter_font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-*
 info_font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
 big_font=-*-helvetica-bold-r-*-*-100-*-*-*-*-*-*-*
 info_duration=$(($MINUTES * 60))
+
 #Break duration is a fifth the length of the pomodoro interval.
 BREAK=$(expr $MINUTES / 5)
 BREAKSUBONE=$(expr $BREAK - 1)
@@ -72,9 +73,7 @@ function print_countdown(){
         sleep 1
 }
 
-
 echo BEGIN! | osd_cat --pos=middle --align=center --color=#00ff00 --font=$big_font --outline=4 --offset=-100 -d 2 &
-
 
 print_countdown $MINUTES 0 red
 echo "Starting timer for $MINUTES minutes followed by a $BREAK minute break."
