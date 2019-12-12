@@ -8,11 +8,6 @@ info_font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
 big_font=-*-helvetica-bold-r-*-*-100-*-*-*-*-*-*-*
 info_duration=$(($MINUTES * 60))
 
-#Break duration is a fifth the length of the pomodoro interval.
-BREAK=$(expr $MINUTES / 5)
-BREAKSUBONE=$(expr $BREAK - 1)
-info_string=$MINUTES\ /\ $BREAK\ \|\ PID:$$ 
-
 #handle arguments:
 while getopts ":m:s:b:" opt; do
   case $opt in
@@ -38,6 +33,11 @@ while getopts ":m:s:b:" opt; do
       ;;
   esac
 done
+
+#Break duration is a fifth the length of the pomodoro interval.
+BREAK=$(expr $MINUTES / 5)
+BREAKSUBONE=$(expr $BREAK - 1)
+info_string=$MINUTES\ /\ $BREAK\ \|\ PID:$$ 
 
 function finish {
     killall osd_cat
@@ -87,7 +87,7 @@ do
         done
 done    
 
-#flash TAKE A BREAK four times:
+#flash "TAKE A BREAK" four times:
 for k in `seq 1 4`;
 do
         echo TAKE A BREAK. | osd_cat --pos=middle --align=center --color=green --font=$big_font --outline=4 --offset=-100 -d 1 &

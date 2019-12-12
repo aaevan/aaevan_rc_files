@@ -44,9 +44,10 @@ function echo_countdown(){
         else 
         echo $1:$2
         fi
-        sleep .1
+        sleep .01
 }
 
+echo_countdown $MINUTES $SECONDS
 for i in `seq 0 $(($MINUTES - 1))`;
 do
         for j in `seq 0 59`
