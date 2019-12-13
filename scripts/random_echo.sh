@@ -44,7 +44,7 @@ function echo_countdown(){
         else 
         echo $1:$2
         fi
-        sleep .01
+        sleep 1
 }
 
 echo_countdown $MINUTES $SECONDS
