@@ -1,7 +1,7 @@
 #!/bin/bash
 
 MINUTES=25
-SECONDS=0
+SECS=0
 WILL_BREAK=1
 color=red
 
@@ -16,7 +16,7 @@ while getopts ":m:s:b:" opt; do
       ;;
     s)
       echo "-s was triggered, Parameter: $OPTARG" >&2
-      SECONDS=$OPTARG
+      SECS=$OPTARG
       ;;
     b)
       echo "-b was triggered, Parameter: $OPTARG" >&2
@@ -43,17 +43,19 @@ convertsecs() {
 pipe_name=/tmp/osd_cat_pipe
 mkfifo $pipe_name
 
-/home/aaron/scripts/random_echo.sh -m $MINUTES > $pipe_name &
+#/home/aaron/scripts/random_echo.sh -m $MINUTES > $pipe_name &
+/home/aaron/scripts/random_echo.sh -m $MINUTES -s 13 > $pipe_name &
 
 info_duration=$(($MINUTES * 60))
-read -r break_h break_m break_s <<< convertsecs $(($MINUTES * 60 + $SECONDS))
+total_secs=$(($MINUTES * 60 + $SECS))
+read -r break_h break_m break_s <<< `convertsecs $total_secs`
 
-total_secs=$(($MINUTES * 60 + $SECONDS))
+echo MINUTES:$MINUTES, SECS:$SECS
+echo convertsecs:`convertsecs $total_secs`
+read -r h m s <<<`convertsecs $total_secs`
+echo H:$h M:$m S:$s
 echo info_duration:$info_duration
 echo break_length:$break_length
-echo convertsecs:`convertsecs 1234`
-read -r h m s <<<`convertsecs 1234`
-echo H:$h M:$m S:$s
 
 osd_cat --pos=top --align=right --font=$COUNTERFONT --offset=-4 -i -10 -d 1 -O 2 -c $color -l 1 $pipe_name &
 echo $MINUTES\ /\ $BREAK\ \|\ PID:$$ | osd_cat --pos=top --align=right --font=$INFOFONT --offset=50 -i -6 -d $info_duration -O 2 -c $color &
