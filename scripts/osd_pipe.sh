@@ -43,11 +43,14 @@ convertsecs() {
 pipe_name=/tmp/osd_cat_pipe
 mkfifo $pipe_name
 
-/home/aaron/scripts/timer_echo.sh -m $MINUTES -s 13 > $pipe_name &
+/home/aaron/scripts/timer_echo.sh -m $MINUTES -s $SECS > $pipe_name &
 
 info_duration=$(($MINUTES * 60))
 total_secs=$(($MINUTES * 60 + $SECS))
-read -r break_h break_m break_s <<< `convertsecs $total_secs`
+read -r h m s <<< `convertsecs $total_secs`
+echo total:$h:$m:$s
+read -r bh bm bs <<< `convertsecs $(($total_secs / 5))`
+echo total:$bh:$bm:$bs
 
 echo MINUTES:$MINUTES, SECS:$SECS
 echo convertsecs:`convertsecs $total_secs`
