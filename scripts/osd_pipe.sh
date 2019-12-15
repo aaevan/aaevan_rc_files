@@ -43,8 +43,7 @@ convertsecs() {
 pipe_name=/tmp/osd_cat_pipe
 mkfifo $pipe_name
 
-#/home/aaron/scripts/random_echo.sh -m $MINUTES > $pipe_name &
-/home/aaron/scripts/random_echo.sh -m $MINUTES -s 13 > $pipe_name &
+/home/aaron/scripts/timer_echo.sh -m $MINUTES -s 13 > $pipe_name &
 
 info_duration=$(($MINUTES * 60))
 total_secs=$(($MINUTES * 60 + $SECS))
