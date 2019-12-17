@@ -48,16 +48,9 @@ mkfifo $pipe_name
 info_duration=$(($MINUTES * 60))
 total_secs=$(($MINUTES * 60 + $SECS))
 read -r h m s <<< `convertsecs $total_secs`
-echo total:$h:$m:$s
 read -r bh bm bs <<< `convertsecs $(($total_secs / 5))`
-echo total:$bh:$bm:$bs
+echo total:$h\h:$m\m:$s\s
+echo break:$bh\h:$bm\m:$bs\s
 
-echo MINUTES:$MINUTES, SECS:$SECS
-echo convertsecs:`convertsecs $total_secs`
-read -r h m s <<<`convertsecs $total_secs`
-echo H:$h M:$m S:$s
-echo info_duration:$info_duration
-echo break_length:$break_length
-
-osd_cat --pos=top --align=right --font=$COUNTERFONT --offset=-4 -i -10 -d 1 -O 2 -c $color -l 1 $pipe_name &
-echo $MINUTES\ /\ $BREAK\ \|\ PID:$$ | osd_cat --pos=top --align=right --font=$INFOFONT --offset=50 -i -6 -d $info_duration -O 2 -c $color &
+osd_cat --pos=top --align=right --font=$COUNTERFONT --offset=-4 -i -10 -d 2 -O 2 -c $color -l 1 $pipe_name &
+echo $MINUTES\ /\ $bm\ \|\ PID:$$ | osd_cat --pos=top --align=right --font=$INFOFONT --offset=50 -i -6 -d $info_duration -O 2 -c $color &
