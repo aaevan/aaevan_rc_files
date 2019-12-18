@@ -1,7 +1,7 @@
 #!/bin/bash
 
 MINUTES=25
-SECS=0
+SECONDS=0
 WILL_BREAK=1
 color=red
 
@@ -16,7 +16,7 @@ while getopts ":m:s:b:" opt; do
       ;;
     s)
       echo "-s was triggered, Parameter: $OPTARG" >&2
-      SECS=$OPTARG
+      SECONDS=$OPTARG
       ;;
     b)
       echo "-b was triggered, Parameter: $OPTARG" >&2
@@ -43,10 +43,10 @@ convertsecs() {
 pipe_name=/tmp/osd_cat_pipe
 mkfifo $pipe_name
 
-/home/aaron/scripts/timer_echo.sh -m $MINUTES -s $SECS > $pipe_name &
+/home/aaron/scripts/timer_echo.sh -m $MINUTES -s $SECONDS > $pipe_name &
 
 info_duration=$(($MINUTES * 60))
-total_secs=$(($MINUTES * 60 + $SECS))
+total_secs=$(($MINUTES * 60 + $SECONDS))
 read -r h m s <<< `convertsecs $total_secs`
 read -r bh bm bs <<< `convertsecs $(($total_secs / 5))`
 echo total:$h\h:$m\m:$s\s
