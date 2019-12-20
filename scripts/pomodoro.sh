@@ -34,6 +34,10 @@ while getopts ":m:s:b:" opt; do
   esac
 done
 
+echo inputs:
+echo MINUTES:$MINUTES
+echo SECONDS:$SECONDS
+
 #Break duration is a fifth the length of the pomodoro interval.
 BREAK=$(expr $MINUTES / 5)
 BREAKSUBONE=$(expr $BREAK - 1)
@@ -56,65 +60,77 @@ function osd_cat_br(){
     done 
 }
 
-function print_countdown(){
-        color=$3
-        if (($1 < 10)) && (($2 < 10))
-        then
-        echo 0$1:0$2 | osd_cat_br $color
-        elif (($1 < 10))
-        then
-        echo 0$1:$2 | osd_cat_br $color
-        elif (($2 < 10))
-        then
-        echo $1:0$2 | osd_cat_br $color
-        else 
-        echo $1:$2 | osd_cat_br $color
-        fi
-        sleep 1
+function countdown_osd(){
+    minutes_input=$1
+    seconds_input=$2
+    color_input=$3
+    set_zero=$4
+    echo minutes_input:$minutes_input, seconds_input:$seconds_input, color_input:$color_input
+    if (($seconds_input > 0))
+    then
+        for second in `seq -w $seconds_input -1 00`
+        do
+            echo `printf "%02d:%02d\n" "${minutes_input#0}" "${second#0}"` | osd_cat_br $color_input
+            sleep .01
+        done
+    else
+        printf "%02d:00\n" "${minutes_input#0}" "${second#0}"
+        sleep .01
+    fi
+
+    echo "Starting timer for $minutes_input minutes followed by a $BREAK minute break."
+    for minutes in `seq $(($minutes_input - 1)) -1 0`;
+    do
+            #for j in `seq 0 59`
+            for seconds in `seq -w 59 -1 0`
+            do
+                echo `printf "%02d:%02d\n" "${minutes#0}" "${seconds#0}"` | osd_cat_br $color_input
+                sleep 1
+            done
+    done    
+}
+
+function stopwatch(){
+    color_input=$1
+    minutes=0
+    for minutes in `seq -w 0 999`
+        do
+            for seconds in `seq -w 0 59`
+            do
+                #echo $minutes:$seconds
+                echo `printf "\-%02d:%02d\n" "${minutes#0}" "${seconds#0}"` | osd_cat_br $color_input
+                sleep 1
+            done
+        done
 }
 
 echo BEGIN! | osd_cat --pos=middle --align=center --color=#00ff00 --font=$big_font --outline=4 --offset=-100 -d 2 &
+#echo Starting countdown for $MINUTES minutes and $SECONDS seconds.
+countdown_osd $MINUTES $SECONDS red
 
-print_countdown $MINUTES 0 red
-echo "Starting timer for $MINUTES minutes followed by a $BREAK minute break."
-for i in `seq 0 $(($MINUTES - 1))`;
+flash "TAKE A BREAK" six times:
+for k in `seq 0 6`;
 do
-        for j in `seq 0 59`
-        do
-            mins=$(expr $(($MINUTES - 1)) - $i)
-            secs=$(expr 59 - $j)
-            print_countdown $mins $secs red
-        done
-done    
-
-#flash "TAKE A BREAK" four times:
-for k in `seq 1 4`;
-do
-        echo TAKE A BREAK. | osd_cat --pos=middle --align=center --color=green --font=$big_font --outline=4 --offset=-100 -d 1 &
-        sleep 2
+    echo TAKE A BREAK!| osd_cat --pos=middle --align=center --color=green --font=$big_font --outline=4 --offset=-100 -d 1 &
+        sleep .5
+        killall osd_cat
+        sleep .5
 done
 
-#start the countdown timer:
-print_countdown $BREAK 0 green
-for l in `seq 0 $BREAKSUBONE`
-do
-    for m in `seq 0 59`
-    do
-        mins=$(expr $BREAKSUBONE - $l)
-        secs=$(expr 59 - $m)
-        print_countdown $mins $secs green
-    done
-done
+countdown_osd $BREAK 0 green
 
 if [ $WILL_BREAK -eq 1 ];
     then
     echo AGAIN? | osd_cat --pos=middle --align=center --color=red --font=$big_font --outline=4 --offset=-100 -d 999 &
+    stopwatch white &
     if zenity --question --text="Again?";
         then
         killall osd_cat
+        kill `jobs -p` #kill the running stopwatch
         ~/scripts/pomodoro.sh -m $MINUTES -s $SECONDS -b $WILL_BREAK & 
         else
         killall osd_cat
+        kill `jobs -p` #kill the running stopwatch
         exit
     fi
 fi
