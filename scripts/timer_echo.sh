@@ -39,7 +39,6 @@ then
         for ms in `seq -w 99 -1 00`
         do
             #echo $MINUTES:$second:$ms
-            #printf "%02d:%02d:%02d\n" $MINUTES $second $ms
             printf "%02d:%02d:%02d\n" "${MINUTES#0}" "${second#0}" "${ms#0}"
             sleep .01
         done
@@ -59,7 +58,6 @@ do
             for ms in `seq -w 99 -1 00`
             do
                 #echo $minute:$second:$ms
-                #printf "%02d:%02d:%02d\n" $minute $second $ms
                 printf "%02d:%02d:%02d\n" "${minute#0}" "${second#0}" "${ms#0}"
                 sleep .01
             done
