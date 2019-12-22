@@ -1,4 +1,4 @@
-A backup of my various config files.
+A running backup of my config files.
 
 Also, an archive of scripts I've written.
 
