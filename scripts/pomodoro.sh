@@ -38,10 +38,21 @@ echo inputs:
 echo MINUTES:$MINUTES
 echo SECONDS:$SECONDS
 
+convertsecs() {
+    h=$(bc <<< "${1}/3600")
+    m=$(bc <<< "(${1}%3600)/60")
+    s=$(bc <<< "${1}%60")
+    printf "%d %d %d\n" $h $m $s
+}
+
 #Break duration is a fifth the length of the pomodoro interval.
 BREAK=$(expr $MINUTES / 5)
 BREAKSUBONE=$(expr $BREAK - 1)
 info_string=$MINUTES\ /\ $BREAK\ \|\ PID:$$ 
+
+total_secs=$(($MINUTES * 60 + $SECONDS))
+read -r h m s <<< `convertsecs $total_secs`
+read -r break_hours break_minutes break_seconds <<< `convertsecs $(($total_secs / 5))`
 
 function finish {
     killall osd_cat
@@ -71,7 +82,7 @@ function countdown_osd(){
         for second in `seq -w $seconds_input -1 00`
         do
             echo `printf "%02d:%02d\n" "${minutes_input#0}" "${second#0}"` | osd_cat_br $color_input
-            sleep .01
+            sleep 1
         done
     else
         printf "%02d:00\n" "${minutes_input#0}" "${second#0}"
@@ -81,7 +92,6 @@ function countdown_osd(){
     echo "Starting timer for $minutes_input minutes followed by a $BREAK minute break."
     for minutes in `seq $(($minutes_input - 1)) -1 0`;
     do
-            #for j in `seq 0 59`
             for seconds in `seq -w 59 -1 0`
             do
                 echo `printf "%02d:%02d\n" "${minutes#0}" "${seconds#0}"` | osd_cat_br $color_input
@@ -117,7 +127,7 @@ do
         sleep .5
 done
 
-countdown_osd $BREAK 0 green
+countdown_osd $break_minutes $break_seconds green
 
 if [ $WILL_BREAK -eq 1 ];
     then
