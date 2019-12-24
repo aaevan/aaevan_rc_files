@@ -46,8 +46,6 @@ convertsecs() {
 }
 
 #Break duration is a fifth the length of the pomodoro interval.
-BREAK=$(expr $MINUTES / 5)
-BREAKSUBONE=$(expr $BREAK - 1)
 info_string=$MINUTES\ /\ $BREAK\ \|\ PID:$$ 
 
 total_secs=$(($MINUTES * 60 + $SECONDS))
@@ -89,7 +87,7 @@ function countdown_osd(){
         sleep .01
     fi
 
-    echo "Starting timer for $minutes_input minutes followed by a $BREAK minute break."
+    echo "Starting timer for $minutes_input minutes followed by a $break_minutes minute break."
     for minutes in `seq $(($minutes_input - 1)) -1 0`;
     do
             for seconds in `seq -w 59 -1 0`
