@@ -105,7 +105,6 @@ function stopwatch(){
         do
             for seconds in `seq -w 0 59`
             do
-                #echo $minutes:$seconds
                 echo `printf "\-%02d:%02d\n" "${minutes#0}" "${seconds#0}"` | osd_cat_br $color_input
                 sleep 1
             done
