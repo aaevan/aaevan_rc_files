@@ -8,7 +8,7 @@ info_font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
 big_font=-*-helvetica-bold-r-*-*-100-*-*-*-*-*-*-*
 info_duration=$(($MINUTES * 60))
 
-#handle arguments:
+#handle optional arguments:
 while getopts ":m:s:b:" opt; do
   case $opt in
     m)
@@ -112,7 +112,6 @@ function stopwatch(){
 }
 
 echo BEGIN! | osd_cat --pos=middle --align=center --color=#00ff00 --font=$big_font --outline=4 --offset=-100 -d 2 &
-#echo Starting countdown for $MINUTES minutes and $SECONDS seconds.
 countdown_osd $MINUTES $SECONDS red
 
 flash "TAKE A BREAK" six times:
