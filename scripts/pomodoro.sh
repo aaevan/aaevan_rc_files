@@ -46,11 +46,12 @@ convertsecs() {
 }
 
 #Break duration is a fifth the length of the pomodoro interval.
-info_string=$MINUTES\ /\ $BREAK\ \|\ PID:$$ 
 
 total_secs=$(($MINUTES * 60 + $SECONDS))
 read -r h m s <<< `convertsecs $total_secs`
 read -r break_hours break_minutes break_seconds <<< `convertsecs $(($total_secs / 5))`
+
+info_string=$MINUTES\ /\ $break_minutes\ \|\ PID:$$ 
 
 function finish {
     killall osd_cat
