@@ -134,7 +134,7 @@ if [ $WILL_BREAK -eq 1 ];
         then
         killall osd_cat
         kill `jobs -p` #kill the running stopwatch
-        ~/scripts/pomodoro.sh -m $MINUTES -s $SECONDS -b $WILL_BREAK & 
+        ~/scripts/pomodoro.sh -m $MINUTES -s $SECONDS
         else
         killall osd_cat
         kill `jobs -p` #kill the running stopwatch
