@@ -115,6 +115,7 @@ function stopwatch(){
 echo BEGIN! | osd_cat --pos=middle --align=center --color=#00ff00 --font=$big_font --outline=4 --offset=-100 -d 2 &
 countdown_osd $MINUTES $SECONDS red
 
+echo "$MINUTES minute pomodoro finished on `date`" >> pomodoro_log.txt
 flash "TAKE A BREAK" six times:
 for k in `seq 0 6`;
 do
