@@ -128,6 +128,11 @@ Mod4 + BackSpace
 "sleep .1; bash /home/aaron/scripts/pomodoro.sh -m 50 &"
 Alt + Mod4 + BackSpace
 
+#view logged pomodoros:
+"xfce4-terminal --hide-menubar -e /home/aaron/scripts/list_pomodoros.sh"
+Shift + Mod4 + Delete
+
+
 #what are you working on?
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/goalbanner.sh"
 Mod4 + Shift + BackSpace
