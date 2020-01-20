@@ -230,3 +230,7 @@ Mod4 + k
 #insert most recent ankified image
 "sleep 1; bash /home/aaron/scripts/ankify_image.sh&"
 Mod4 + 1
+
+#wipe an entire vim document
+"sleep 1; bash /home/aaron/scripts/anki_vim_clear_macro.sh&"
+Mod4 + 2
