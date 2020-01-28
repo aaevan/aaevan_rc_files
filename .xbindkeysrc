@@ -232,5 +232,10 @@ Mod4 + k
 Mod4 + 1
 
 #wipe an entire vim document
-"sleep 1; bash /home/aaron/scripts/anki_vim_clear_macro.sh&"
+"sleep .5; bash /home/aaron/scripts/anki_vim_clear_macro.sh&"
 Mod4 + 2
+
+#put an arrow on the screen at the cursor
+"/home/aaron/scripts/osd_arrow.sh"
+Shift + Mod4 + comma
+
