@@ -1,6 +1,8 @@
 #system wide macro to delete an entire vim document
 #ggvGdd
 delay=10
+xdotool keydown --delay $delay "Escape"
+xdotool keyup --delay $delay "Escape"
 xdotool keydown --delay $delay g
 xdotool keyup --delay $delay g
 xdotool keydown --delay $delay g
