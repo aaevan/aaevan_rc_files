@@ -1,5 +1,5 @@
 #f3 --> tab * 9 --> space --> enter
-delay=10
+delay=15
 #xdotool keydown --delay $delay Return 
 #xdotool keyup --delay $delay Return
 xdotool keydown --delay $delay F3
