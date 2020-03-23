@@ -65,9 +65,6 @@ function osd_cat_br(){
     #osd_cat needs something piped to it. osd_cat accepts raw text from cat
     color=$1
     while read data; do
-        #echo $data | osd_cat --pos=top --align=right --font=$counter_font --offset=-4 -i -10 -d 1 -O 2 -c $color &
-        #echo $info_string | osd_cat --pos=top --align=right --font=$info_font --offset=50 -i -6 -d 1 -O 2 -c $color &
-#Settings for
         echo $data | osd_cat --pos=top --align=right --font=$counter_font --offset=76 -i -10 -d 1 -O 2 -c $color &
         echo $info_string | osd_cat --pos=top --align=right --font=$info_font --offset=130 -i -6 -d 1 -O 2 -c $color &
     done 
