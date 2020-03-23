@@ -129,7 +129,8 @@ countdown_osd $break_minutes $break_seconds green
 
 if [ $WILL_BREAK -eq 1 ];
     then
-    echo AGAIN? | osd_cat --pos=middle --align=center --color=red --font=$big_font --outline=4 --offset=-100 -d 999 &
+        message_text="AGAIN? (`./echo_current_i3_workspace.sh`)"
+        echo $message_text| osd_cat --pos=middle --align=center --color=red --font=$big_font --outline=4 --offset=-100 -d 999 &
     stopwatch white &
     if zenity --question --text="Again?";
         then
