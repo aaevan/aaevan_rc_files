@@ -242,3 +242,7 @@ Shift + Mod4 + period
 #put an arrow on the screen to the left of the cursor
 "/home/aaron/scripts/wrapper_right.sh"
 Shift + Mod4 + comma
+
+#open a random interviewcake problem:
+"google-chrome https://www.interviewcake.com/random-question"
+Shift + Mod4 + c
