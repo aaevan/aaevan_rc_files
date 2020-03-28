@@ -2,7 +2,6 @@
 an incomplete (but hopefully useful) tool for printing what different indices
 point to at any given point in time in an algorithms execution.
 '''
-
 def array_debug(arr, index_tuples):
     """
     takes an array and a series of (index, label_str) pairs
@@ -23,7 +22,7 @@ def array_debug(arr, index_tuples):
         splice_in.append("{}|".format(whitespace))
         for i in range(offset):
             splice_in.append("{}|".format(whitespace))
-        splice_in.append("{}{}".format(whitespace, label))
+        splice_in.append("{}{} ({})".format(whitespace, label, index))
         for index, line in enumerate(splice_in):
             output[index + 1] = merge_strings(output[index + 1], line)
     for line in output:
