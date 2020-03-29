@@ -1,6 +1,14 @@
 '''
-an incomplete (but hopefully useful) tool for printing what different indices
-point to at any given point in time in an algorithms execution.
+a tool for prettily printing what different indices point to 
+at any given point in time in an algorithms execution.
+
+Included example:
+[6, 20, 23, 28, 37, 38, 39, 46, 51, 52, 55, 59, 73, 80, 81]
+ |                  |   |                               |
+ beginning (0)      |   |                               |
+                    middle (5)                          |
+                        neighbor (6)                    |
+                                                        end (-1)
 '''
 def array_debug(arr, index_tuples):
     """
