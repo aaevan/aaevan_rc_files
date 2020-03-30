@@ -19,6 +19,7 @@ Mod4 + h
 "xfce4-terminal --hide-menubar -e 'alsamixer -c 1'"
 Mod4 + m
 
+#mute everything
 "/home/aaron/scripts/muteall.sh"
 Mod4 + slash
 
@@ -96,10 +97,6 @@ Mod4 + Shift + g
 "/home/aaron/scripts/area_screen.sh"
 Mod4 + 0
 
-#take an area screenshot
-"/home/aaron/scripts/ankify_screenshot.sh"
-Mod4 + Shift + 0
-
 #morning brain note
 "gvim /home/aaron/notes/morningbrain_$(date '+%m-%d-%y_%H-%M-%S').txt"
 Mod4 + Shift + b
@@ -131,7 +128,6 @@ Alt + Mod4 + BackSpace
 #view logged pomodoros:
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/list_pomodoros.sh"
 Shift + Mod4 + Delete
-
 
 #what are you working on?
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/goalbanner.sh"
@@ -184,28 +180,16 @@ Alt+Mod4 + d
 "~/scripts/flashy_bullshit -m 'FUCK YEAH!'"
 Mod4 + Shift + 2
 
-"~/scripts/flashy_bullshit -m 'NOPE NOPE NOPE'"
+"~/scripts/flashy_bullshit -m 'NOPE'"
 Mod4 + Shift + 3
 
 #open spotify
 "spotify"
 Mod4 + backslash
 
-#open ankiweb
-"google-chrome https://ankiweb.net/decks/"
-Alt + Mod4 + a
-
-#open ankiweb card creation
-"google-chrome https://ankiuser.net/edit/"
-Alt + Mod4 + q
-
 #ergodox layout cheatsheet
 "pqiv -fti ~/scripts/ergodox_layout.png"
 Mod4 + 6
-
-#open active selling in ebay:
-"google-chrome https://www.ebay.com/mys/active"
-Mod4 + Shift + e
 
 #down key x15
 "sleep .1; bash /home/aaron/scripts/multi_keyer.sh Down 50 15 &"
@@ -215,19 +199,15 @@ Mod4 + Down
 "sleep .1; bash /home/aaron/scripts/multi_keyer.sh Up 50 15 &"
 Mod4 + Up
 
-#open projects folder
-"nautilus ~/projects/"
-Mod4 + Alt + p
-
 #xrandr-invert-colors
 "xrandr-invert-colors"
 Mod4 + i
 
-#open codewars
-"google-chrome https://www.codewars.com/kata/"
-Mod4 + k
+#take an area screenshot and put it in /home/ankify
+"/home/aaron/scripts/ankify_screenshot.sh"
+Mod4 + Shift + 0
 
-#insert most recent ankified image
+#insert most recently modified image in /home/ankify
 "sleep 1; bash /home/aaron/scripts/ankify_image.sh&"
 Mod4 + 1
 
