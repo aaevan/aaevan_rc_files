@@ -116,6 +116,7 @@ echo BEGIN! | osd_cat --pos=middle --align=center --color=#00ff00 --font=$big_fo
 countdown_osd $MINUTES $SECONDS red
 
 echo "$MINUTES minute pomodoro finished on `date --rfc-3339='second'`" >> ~/pomodoro_log.txt
+
 flash "TAKE A BREAK" six times:
 for k in `seq 0 6`;
 do
@@ -125,7 +126,7 @@ do
         sleep .5
 done
 
-countdown_osd $break_minutes $break_seconds green
+#countdown_osd $break_minutes $break_seconds green
 
 if [ $WILL_BREAK -eq 1 ];
     then
@@ -136,8 +137,7 @@ if [ $WILL_BREAK -eq 1 ];
         then
         killall osd_cat
         kill `jobs -p` #kill the running stopwatch
-        #~/scripts/pomodoro.sh -m $MINUTES -s $SECONDS #something weird is happening here. Resets to 25 minutes after one run.
-        ~/scripts/pomodoro.sh
+        ~/scripts/pomodoro.sh -m $MINUTES -s $SECONDS #something weird is happening here. Resets to 25 minutes after one run.
         else
         killall osd_cat
         kill `jobs -p` #kill the running stopwatch
