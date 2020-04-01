@@ -55,6 +55,10 @@ Mod4 + Shift + Control + r
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/pinger"
 Mod4 + p
 
+#start 10m timer
+"xfce4-terminal --hide-menubar -e /home/aaron/scripts/10m_timer_wrapper.sh"
+Mod4 + shift + 6
+
 #volume up
 "amixer -D pulse sset Master 4%+"
 XF86AudioRaiseVolume

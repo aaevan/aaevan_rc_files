@@ -85,7 +85,7 @@ function countdown_osd(){
         done
     else
         printf "%02d:00\n" "${minutes_input#0}" "${second#0}"
-        sleep .01
+        sleep 1
     fi
 
     echo "Starting timer for $minutes_input minutes followed by a $break_minutes minute break."
