@@ -38,12 +38,10 @@ then
     do
         for ms in `seq -w 99 -1 00`
         do
-            #echo $MINUTES:$second:$ms
             printf "%02d:%02d:%02d\n" "${MINUTES#0}" "${second#0}" "${ms#0}"
             sleep .01
+            #clear
         done
-        #echo $MINUTES:$second
-        #sleep 1
     done
 else
     echo $MINUTES:00:00
@@ -54,13 +52,11 @@ for minute in `seq -w $(($MINUTES - 1)) -1 0`
 do
         for second in `seq -w 59 -1 0`
         do
-            #echo $minute:$second
             for ms in `seq -w 99 -1 00`
             do
-                #echo $minute:$second:$ms
                 printf "%02d:%02d:%02d\n" "${minute#0}" "${second#0}" "${ms#0}"
                 sleep .01
+                #clear
             done
-            #sleep 1
         done
 done

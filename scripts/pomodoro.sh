@@ -101,12 +101,12 @@ function countdown_osd(){
 
 function stopwatch(){
     color_input=$1
-    minutes=0
-    for minutes in `seq -w 0 999`
+    stop_minutes=0
+    for stop_minutes in `seq -w 0 999`
         do
-            for seconds in `seq -w 0 59`
+            for stop_seconds in `seq -w 0 59`
             do
-                echo `printf "\-%02d:%02d\n" "${minutes#0}" "${seconds#0}"` | osd_cat_br $color_input
+                echo `printf "\-%02d:%02d\n" "${stop_minutes#0}" "${stop_seconds#0}"` | osd_cat_br $color_input
                 sleep 1
             done
         done
@@ -133,11 +133,13 @@ if [ $WILL_BREAK -eq 1 ];
         message_text="AGAIN? (`./scripts/echo_current_i3_workspace.sh`)"
         echo $message_text| osd_cat --pos=middle --align=center --color=red --font=$big_font --outline=4 --offset=-100 -d 999 &
     stopwatch white &
+    echo "before dialog: $MINUTES"
     if zenity --question --text="Again?";
         then
         killall osd_cat
         kill `jobs -p` #kill the running stopwatch
-        ~/scripts/pomodoro.sh -m $MINUTES -s $SECONDS 
+        #~/scripts/pomodoro.sh -m $MINUTES -s $SECONDS 
+        ~/scripts/pomodoro.sh -m $MINUTES
         else
         killall osd_cat
         kill `jobs -p` #kill the running stopwatch
