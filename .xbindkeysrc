@@ -93,6 +93,10 @@ Mod4 + n
 "google-chrome https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 Mod4 + 8
 
+#close my eyes
+"google-chrome https://youtu.be/Ss0kFNUP4P4?t=1m11s"
+Mod4 + Shift + l
+
 #gen.lib.rus.ec
 "google-chrome gen.lib.rus.ec"
 Mod4 + Shift + g
@@ -100,10 +104,6 @@ Mod4 + Shift + g
 #take an area screenshot
 "/home/aaron/scripts/area_screen.sh"
 Mod4 + 0
-
-#morning brain note
-"gvim /home/aaron/notes/morningbrain_$(date '+%m-%d-%y_%H-%M-%S').txt"
-Mod4 + Shift + b
 
 #yoga hotkey
 "google-chrome https://www.youtube.com/watch?v=D9q5WsMk4ro"
@@ -136,10 +136,6 @@ Shift + Mod4 + Delete
 #what are you working on?
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/goalbanner.sh"
 Mod4 + Shift + BackSpace
-
-#close my eyes
-"google-chrome https://youtu.be/Ss0kFNUP4P4?t=1m11s"
-Mod4 + Shift + l
 
 #ping google 3 times.
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/findmnt_wrapper.sh"
