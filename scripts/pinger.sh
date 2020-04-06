@@ -1,4 +1,5 @@
 #!/bin/bash
 
-ping -c 4 google.com | grep from
+echo "Pinging google..."
+ping -c 3 google.com | grep from
 sleep 1

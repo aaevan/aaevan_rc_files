@@ -1,3 +1,0 @@
-tree is really great. Make sure to install it.
-
-htop

@@ -52,7 +52,7 @@ Mod4 + Shift + r
 Mod4 + Shift + Control + r
 
 #ping google 3 times.
-"xfce4-terminal --hide-menubar -e /home/aaron/scripts/pinger"
+"xfce4-terminal --hide-menubar -e /home/aaron/scripts/pinger.sh"
 Mod4 + p
 
 #start 10m timer
