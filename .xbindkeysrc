@@ -146,7 +146,7 @@ Mod4 + d
 Mod4 + shift + a
 
 #bed screen layout:
-"/home/aaron/.screenlayout/bed_setup.sh"
+"/home/aaron/.screenlayout/triple_bed_config.sh"
 Mod4 + shift + s
 
 #default screen layout:
