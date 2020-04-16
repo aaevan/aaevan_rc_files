@@ -13,6 +13,9 @@ Mod4 + Shift + i
 "killall xbindkeys; xbindkeys"
 Mod4 + r
 
+"killall xbindkeys; xbindkeys"
+Mod4 + XF86MonBrightnessDown
+
 "xfce4-terminal --hide-menubar -e htop"
 Mod4 + h
 
@@ -23,14 +26,14 @@ Mod4 + m
 "/home/aaron/scripts/muteall.sh"
 Mod4 + slash
 
-"google-chrome"
+"/opt/firefox/firefox"
 Mod4 + f
 
 #open workflowy
-"google-chrome workflowy.com"
+"/opt/firefox/firefox workflowy.com"
 Mod4 + w
 
-"google-chrome calendar.google.com"
+"/opt/firefox/firefox calendar.google.com"
 Mod4 + c
 
 "xkill"
@@ -48,7 +51,7 @@ Mod4 + Shift + n
 Mod4 + Shift + r
 
 #display list of commits to config files
-"google-chrome https://github.com/aaevan/aaevan_rc_files/commits/master"
+"/opt/firefox/firefox https://github.com/aaevan/aaevan_rc_files/commits/master"
 Mod4 + Shift + Control + r
 
 #ping google 3 times.
@@ -90,15 +93,15 @@ Mod4 + Shift + P
 Mod4 + n
 
 #rick astley
-"google-chrome https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+"/opt/firefox/firefox https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 Mod4 + 8
 
 #close my eyes
-"google-chrome https://youtu.be/Ss0kFNUP4P4?t=1m11s"
+"/opt/firefox/firefox https://youtu.be/Ss0kFNUP4P4?t=1m11s"
 Mod4 + Shift + l
 
 #gen.lib.rus.ec
-"google-chrome gen.lib.rus.ec"
+"/opt/firefox/firefox gen.lib.rus.ec"
 Mod4 + Shift + g
 
 #take an area screenshot
@@ -106,11 +109,11 @@ Mod4 + Shift + g
 Mod4 + 0
 
 #yoga hotkey
-"google-chrome https://www.youtube.com/watch?v=D9q5WsMk4ro"
+"/opt/firefox/firefox https://www.youtube.com/watch?v=D9q5WsMk4ro"
 Mod4 + y
 
 #7-min workout hotkey
-"google-chrome https://www.youtube.com/watch?v=Jru5B044HOs"
+"/opt/firefox/firefox https://www.youtube.com/watch?v=Jru5B044HOs"
 Mod4 + 7
 
 #survival series quote (requires libxosd)
@@ -224,5 +227,5 @@ Shift + Mod4 + period
 Shift + Mod4 + comma
 
 #open a random interviewcake problem:
-"google-chrome https://www.interviewcake.com/random-question"
+"/opt/firefox/firefo/opt/firefox/firefox https://www.interviewcake.com/random-question"
 Shift + Mod4 + c

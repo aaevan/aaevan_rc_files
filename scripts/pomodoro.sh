@@ -4,7 +4,7 @@ SECONDS=0
 WILL_BREAK=1
 
 counter_font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-*
-info_font=-*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
+info_font=-*-helvetica-bold-r-*-*-14-*-*-*-*-*-*-*
 big_font=-*-helvetica-bold-r-*-*-100-*-*-*-*-*-*-*
 info_duration=$(($MINUTES * 60))
 
