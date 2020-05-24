@@ -62,6 +62,18 @@ Mod4 + p
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/10m_timer_wrapper.sh"
 Mod4 + shift + 6
 
+#start 10m timer
+"xfce4-terminal --hide-menubar -e /home/aaron/scripts/10m_timer_wrapper.sh"
+Mod4 + shift + 7
+
+#make a timestamped note
+"sleep .1; gvim /home/aaron/notes/note_$(date '+%m-%d-%y_%H-%M-%S').txt"
+Mod4 + Shift + 7
+
+#adjust the window size
+"/home/aaron/scripts/adjust_journal_window.sh"
+Mod4 + Shift + 7
+
 #volume up
 "amixer -D pulse sset Master 4%+"
 XF86AudioRaiseVolume
@@ -139,10 +151,6 @@ Shift + Mod4 + Delete
 #what are you working on?
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/goalbanner.sh"
 Mod4 + Shift + BackSpace
-
-#ping google 3 times.
-"xfce4-terminal --hide-menubar -e /home/aaron/scripts/findmnt_wrapper.sh"
-Mod4 + d
 
 #arandr (screen setup)
 "arandr"
