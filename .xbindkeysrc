@@ -226,6 +226,10 @@ Mod4 + Shift + 0
 "sleep 1; bash /home/aaron/scripts/ankify_image.sh&"
 Mod4 + 1
 
+#write to a vim document the text inside an area screenshot.
+"/home/aaron/scripts/extract_text_from_area_screen.sh"
+Mod4 + Shift + t
+
 #wipe an entire vim document
 "sleep .5; bash /home/aaron/scripts/anki_vim_clear_macro.sh &"
 Mod4 + 2
