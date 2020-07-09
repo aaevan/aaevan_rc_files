@@ -249,3 +249,7 @@ Shift + Mod4 + c
 #turn off hanging screen
 "xrandr --output VGA1 --off"
 Shift + Mod4 + End
+
+#record 10s, view recording in spek
+"arecord -vv -fdat -d 10 test.wav; spek test.wav"
+Mod4 + 9
