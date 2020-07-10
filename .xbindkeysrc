@@ -251,5 +251,6 @@ Shift + Mod4 + c
 Shift + Mod4 + End
 
 #record 10s, view recording in spek
-"arecord -vv -fdat -d 10 test.wav; spek test.wav"
+#"arecord -vv -fdat -d 10 test.wav; spek test.wav"
+"/home/aaron/scripts/10s_spek.sh"
 Mod4 + 9
