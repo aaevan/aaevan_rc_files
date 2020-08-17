@@ -124,6 +124,10 @@ Mod4 + Shift + g
 "/home/aaron/scripts/area_screen.sh"
 Mod4 + 0
 
+#take an 400x400 gif and matched still image
+"/home/aaron/scripts/area_gif.sh"
+Mod4 + g
+
 #yoga hotkey
 "/opt/firefox/firefox https://www.youtube.com/watch?v=D9q5WsMk4ro"
 Mod4 + y
