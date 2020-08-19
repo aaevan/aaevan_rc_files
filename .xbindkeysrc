@@ -120,6 +120,10 @@ Mod4 + Shift + l
 "/opt/firefox/firefox gen.lib.rus.ec"
 Mod4 + Shift + g
 
+#scihub
+"/opt/firefox/firefox scihub.to"
+Mod4 + Shift + h
+
 #take an area screenshot
 "/home/aaron/scripts/area_screen.sh"
 Mod4 + 0
