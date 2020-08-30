@@ -2,7 +2,39 @@ import subprocess
 
 def find_corners(screen_name="VGA1"):
     """
-    doesn't work yet for primary display
+    given the name of a screen (found with arandr or xrandr with no arguments),
+    return the screen coordinates of each corner
+
+    top left of xrandr's whole virtual screenspace is (0, 0)
+    if VGA is touching its top left corner with the bottom right corner of your main display:
+
+        0------+
+        | main |
+        |      |
+        +------+-----+
+               | VGA |
+               |     |
+               +-----+
+
+    ...main display's top left coord will be (0, 0) (indicated with a 0)
+    VGA (or whatever your second screen is named), its bottom right coordinate will be
+         x: main's width + VGA's width
+         y: main's height + VGA's height
+
+    if the second screen's bottom left corner is aligned with main's top right, 
+
+        0      +-----+
+               | VGA |
+               |     |
+        +------+-----+
+        | main |
+        |      |
+        +------+
+
+    ... main's bottom right will be:
+        x: main's width
+        y: VGA's height + main's height
+
     """
     command = "xrandr"
     process = subprocess.Popen(
