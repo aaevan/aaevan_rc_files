@@ -1,6 +1,9 @@
 "gvim"
 Mod4 + v
 
+"/opt/firefox/firefox cronometer.com"
+Mod4 + shift + f
+
 "gvim /home/aaron/.xbindkeysrc"
 Mod4 + shift + k
 
@@ -71,12 +74,12 @@ Mod4 + shift + 6
 Mod4 + shift + 7
 
 #make a timestamped note
-"sleep 1; gvim /home/aaron/notes/note_$(date '+%m-%d-%y_%H-%M-%S').txt"
+"gvim /home/aaron/notes/note_$(date '+%m-%d-%y_%H-%M-%S').txt"
 Mod4 + Shift + 7
 
-#adjust the window size
-"sleep 2; /home/aaron/scripts/adjust_journal_window.sh"
-Mod4 + Shift + 7
+#adjust the window size (doesn't work)
+#"sleep 2; /home/aaron/scripts/adjust_journal_window.sh"
+#Mod4 + Shift + 7
 
 #volume up
 "amixer -D pulse sset Master 4%+"
