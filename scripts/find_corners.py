@@ -1,4 +1,5 @@
 import subprocess
+import time
 
 def find_corners(screen_name="VGA1"):
     """
@@ -46,8 +47,9 @@ def find_corners(screen_name="VGA1"):
     #split stdout on newlines:
     lines = str(stdout).split('\\n')
     #find just the line with the resolution string:
-    grepped = [line for line in lines if "VGA1" in line][0]
+    grepped = [line for line in lines if screen_name in line][0]
     #separate out just the resolution string:
+    print("grepped:", grepped)
     resolution_string = list(filter(lambda x: '+' in x, grepped.split()))
     #replace x and + characters with spaces:
     cleaned = resolution_string[0].replace('x', ' ').replace('+', ' ').split()
@@ -63,8 +65,45 @@ def find_corners(screen_name="VGA1"):
     print("bottom_right:", bottom_right)
     return (top_left, top_right, bottom_right, bottom_left)
 
+def get_timestamp():
+    t = time.localtime()
+    current_time = time.strftime("%H-%M-%S_%m-%d-%y")
+    return current_time
+
+def take_area_screenshot(
+    top_left_coord, 
+    bottom_right_coord, 
+    out_dir_template="~/Pictures/area_gif_output/{}.png"
+):
+    x1, y1 = top_left_coord
+    x2, y2 = bottom_right_coord
+    screenshot_width, screenshot_height = x2 - x1, y2 - y1
+    coord_string = "{},{},{},{}".format(x1, y1, screenshot_width, screenshot_height)
+    out_dir = out_dir_template.format(get_timestamp())
+    command = "shutter -s={} -e --output={}".format(coord_string, out_dir)
+    process = subprocess.Popen(
+        command.split(),
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    stdout, stderr = process.communicate()
+
+def take_screenshot(
+    out_dir_template="~/Pictures/{}.png"
+):
+    out_path = out_dir_template.format(get_timestamp())
+    command = "import -window root {}".format(coord_string, out_path)
+    process = subprocess.Popen(
+        command.split(),
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    stdout, stderr = process.communicate()
+    return out_path
+
 def main():
     print("find_corners():")
-    find_corners()
+    find_corners(screen_name="eDP1")
+    take_area_screenshot((0, 0), (400, 400))
 
 main()
