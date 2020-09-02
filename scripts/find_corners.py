@@ -92,7 +92,7 @@ def take_screenshot(
     out_dir_template="~/Pictures/{}.png"
 ):
     out_path = out_dir_template.format(get_timestamp())
-    command = "import -window root {}".format(coord_string, out_path)
+    command = "import -window root {}".format(out_path)
     process = subprocess.Popen(
         command.split(),
         stdout=subprocess.PIPE,
@@ -104,6 +104,7 @@ def take_screenshot(
 def main():
     print("find_corners():")
     find_corners(screen_name="eDP1")
-    take_area_screenshot((0, 0), (400, 400))
+    #take_area_screenshot((0, 0), (400, 400))
+    take_screenshot()
 
 main()
