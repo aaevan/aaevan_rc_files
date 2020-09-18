@@ -3,8 +3,6 @@
 # Adapted from the xlib example from
 # https://blog.wizardsoftheweb.pro/quickly-detect-cursor-position-and-color/#caveats
 
-from __future__ import print_function
-
 from os import getenv
 from time import sleep
 from random import randint
@@ -53,18 +51,22 @@ def get_rgb_of_pixel(coords=(0, 0)):
     return (r, g, b)    
 
 def take_n_samples_from_rect(
-    n_samples=10, 
     top_left_coord=(0, 0),
+    n_samples=5, 
     sample_width=100,
     sample_height=100,
+    edge_buffer=2,#pixels
 ):
     x1, y1 = top_left_coord
-    x2, y2 = x1 + sample_width, y1 + sample_height
+    x2, y2 = (
+        (x1 + sample_width) - edge_buffer, 
+        (y1 + sample_height) - edge_buffer,
+    )
     coords = [rand_coord_in_rect(x1, y1, x2, y2) for _ in range(n_samples)]
     rgb_samples = [get_rgb_of_pixel(coords=coord) for coord in coords]
     return rgb_samples
 
-def average_rgb_from_samples(samples):
+def mean_rgb_from_samples(samples):
     r_sum, g_sum, b_sum = 0, 0, 0
     for sample in samples:
         r_val, g_val, b_val = sample
@@ -85,6 +87,7 @@ def get_edge_sample_coords(
     sample_width = 100,
     num_horiz_cells = 7,
     num_vert_cells = 5,
+    debug=False,
 ):
     """
     the coordinates assume we're using the top left coordinate of a square that
@@ -117,21 +120,10 @@ def get_edge_sample_coords(
     right_edge_coords = [(width - sample_width, y_val) for y_val in right_edge_y_vals]
     bottom_edge_coords = [(x_val, height - sample_width) for x_val in bottom_edge_x_vals]
     left_edge_coords = [(0, y_val) for y_val in left_edge_y_vals]
-    print("top:", top_edge_coords)
-    print("right:", right_edge_coords)
-    print("bottom:", bottom_edge_coords)
-    print("left:", left_edge_coords)
+    if debug:
+        print("top:", top_edge_coords)
+        print("right:", right_edge_coords)
+        print("bottom:", bottom_edge_coords)
+        print("left:", left_edge_coords)
     output_coord_list = top_edge_coords + right_edge_coords + bottom_edge_coords + left_edge_coords
     return output_coord_list
-
-print(get_edge_sample_coords())
-#count = 0
-#while True:
-    #count = (count + 1) % 1000
-    #COORDS = get_mouse_location()
-    #r, g, b = get_rgb_of_pixel(coords=COORDS)
-    #template = "x:{} y:{} r:{} g:{} b:{})"
-    #print(template.format(COORDS.root_x, COORDS.root_y, r, g, b))
-    #samples = take_n_samples_from_rect()
-    #print(count, samples, average_rgb_from_samples(samples))
-    #sleep(1)
