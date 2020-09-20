@@ -2,7 +2,6 @@ from PIL import Image, ImageFilter
 import sys
 from math import sqrt
 
-DEBUG=False
 
 def point_to_point_distance(coord_a=(0, 0), coord_b=(10, 10)):
     x1, y1, x2, y2 = *coord_a, *coord_b
@@ -41,25 +40,17 @@ def is_inside_bounds(
         return False
     if y_check < y1 or y_check > y2:
         return False
-    #print("{} is inside a box bounded by {} and {}".format(
-        #check_coord, top_left_coord, bottom_right_coord)
-    #)
     return True
 
 
-def main():
+def main(debug=False):
     input_file = sys.argv[1]
-
     im = Image.open(input_file).convert('RGB')
     pixels = im.load()
     im_copy = im.copy()
     pixels_copy = im_copy.load()
-
-    #min_sum = 255 * 3
-    #max_sum = 0
-
     # for each pixel in the image...
-    circle_cell_offsets = get_cells_in_circle(radius=5, center=(0, 0))
+    circle_cell_offsets = get_cells_in_circle(radius=3, center=(0, 0))
     bottom_right_coord = (im.size[0] - 1, im.size[1] - 1)
     print("bottom right coord is:", bottom_right_coord)
     for i in range(im.size[0]):
@@ -77,7 +68,7 @@ def main():
                 ):
                     inner_sum_attributes = sum(pixels[offset_coord])
                     if inner_sum_attributes < local_min_sum:
-                        if DEBUG:
+                        if debug:
                             print("updating local_min_sum from {} to {}, (min: {}, max: {})".format(
                                 local_min_sum, 
                                 inner_sum_attributes,
@@ -86,7 +77,7 @@ def main():
                             ))
                         local_min_sum = inner_sum_attributes
                     if inner_sum_attributes > local_max_sum:
-                        if DEBUG:
+                        if debug:
                             print("updating local_max_sum from {} to {}, (min: {}, max: {})".format(
                                 local_max_sum, 
                                 inner_sum_attributes,
@@ -101,7 +92,6 @@ def main():
             if val_sum_range == 0:
                 pixels_copy[i, j] = (0, 255, 0)
                 continue
-            #based on the local max_s
             grey_value = 255 * ((sum_attributes - local_min_sum) / val_sum_range)
             whole_grey_value = round(grey_value)
             output_pixel = [whole_grey_value] * 3
@@ -112,9 +102,8 @@ def main():
             if grey_value % 1 >= (2/3):
                 output_pixel[1] += 1
             pixels_copy[i, j] = tuple(output_pixel)
-
-    im.show()
-    im_copy.show()
+    im.show() #display original with system default
+    im_copy.show() #display filtered with system default
 
 if __name__ == "__main__":
     main()
