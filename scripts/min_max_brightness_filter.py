@@ -107,9 +107,10 @@ def main(debug=False):
             if grey_value % 1 >= (2/3):
                 output_pixel[1] += 1
             pixels_copy[i, j] = tuple(output_pixel)
-    im.show() #display original with system default
-    im_copy.show() #display filtered with system default
-    im_copy.save(output_filename)
+    #im.show() #display original with system default
+    #im_copy.show() #display filtered with system default
+    im_copy.save(output_file)
+    print("output file to {}".format(output_file))
 
 if __name__ == "__main__":
     main()
