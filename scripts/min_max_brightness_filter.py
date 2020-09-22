@@ -1,6 +1,7 @@
 from PIL import Image, ImageFilter
 import sys
 from math import sqrt
+from random import choice
 
 
 def point_to_point_distance(coord_a=(0, 0), coord_b=(10, 10)):
@@ -45,6 +46,8 @@ def is_inside_bounds(
 
 def main(debug=False):
     input_file = sys.argv[1]
+    filename, extension = input_file.split('.')
+    output_file = "{}_filtered.{}".format(filename, extension)
     im = Image.open(input_file).convert('RGB')
     pixels = im.load()
     im_copy = im.copy()
@@ -59,7 +62,9 @@ def main(debug=False):
             local_max_sum = 0
             # for each pixel in a circle around the current pixel
             # find the local max_sum and min_sum
-            for offset in circle_cell_offsets:
+            pixel_picks = [choice(circle_cell_offsets) for _ in range(10)]
+            #for offset in circle_cell_offsets:
+            for offset in pixel_picks:
                 offset_coord = add_coords((i, j), offset)
                 if is_inside_bounds(
                     check_coord=offset_coord, 
@@ -104,6 +109,7 @@ def main(debug=False):
             pixels_copy[i, j] = tuple(output_pixel)
     im.show() #display original with system default
     im_copy.show() #display filtered with system default
+    im_copy.save(output_filename)
 
 if __name__ == "__main__":
     main()
