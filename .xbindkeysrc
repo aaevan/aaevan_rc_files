@@ -123,6 +123,10 @@ Mod4 + Shift + l
 "/opt/firefox/firefox gen.lib.rus.ec"
 Mod4 + Shift + g
 
+#ebay
+"/opt/firefox/firefox ebay.com"
+Mod4 + Shift + e
+
 #scihub
 "/opt/firefox/firefox scihub.to"
 Mod4 + Shift + h
