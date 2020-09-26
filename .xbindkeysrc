@@ -61,6 +61,10 @@ Mod4 + Shift + Control + r
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/pinger.sh"
 Mod4 + p
 
+#stonks
+"xfce4-terminal --hide-menubar -e /home/aaron/scripts/stonks.sh"
+Mod4 + Shift + 4
+
 #ping google 3 times. (alternate keybinding)
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/pinger.sh"
 Control + Alt + p
