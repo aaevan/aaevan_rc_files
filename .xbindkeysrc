@@ -251,19 +251,19 @@ Mod4 + Shift + 0
 "sleep 1; bash /home/aaron/scripts/ankify_image.sh&"
 Mod4 + 1
 
-#write to a vim document the text inside an area screenshot.
+#OCR the text inside an area screenshot and output to vim
 "/home/aaron/scripts/extract_text_from_area_screen.sh"
 Mod4 + Shift + t
 
-#wipe an entire vim document
+#wipe an entire vim document ("ggvG$")
 "sleep .5; bash /home/aaron/scripts/anki_vim_clear_macro.sh &"
 Mod4 + 2
 
-#put an arrow on the screen to the left of the cursor
+#put an osd_cat arrow on the screen to the left of the cursor
 "/home/aaron/scripts/wrapper_left.sh"
 Shift + Mod4 + period
 
-#put an arrow on the screen to the left of the cursor
+#put an osd_cat arrow on the screen to the left of the cursor
 "/home/aaron/scripts/wrapper_right.sh"
 Shift + Mod4 + comma
 
@@ -271,11 +271,7 @@ Shift + Mod4 + comma
 "/opt/firefox/firefo/opt/firefox/firefox https://www.interviewcake.com/random-question"
 Shift + Mod4 + c
 
-#turn off hanging screen
-"xrandr --output VGA1 --off"
-Shift + Mod4 + End
-
-#record 10s, view recording in spek
+#record 10s of audio and view recording in spek
 #"arecord -vv -fdat -d 10 test.wav; spek test.wav"
 "/home/aaron/scripts/10s_spek.sh"
 Mod4 + 9
