@@ -7,21 +7,27 @@ Mod4 + shift + f
 "gvim /home/aaron/.xbindkeysrc"
 Mod4 + shift + k
 
+#open bashrc in vim:
 "gvim /home/aaron/.bashrc"
 Mod4 + b
 
+#open i3wm config file:
 "gvim /home/aaron/.i3/config"
 Mod4 + Shift + i
 
+#refresh xbindkeys with the current config file:
 "killall xbindkeys; xbindkeys"
 Mod4 + r
 
+#alternate binding for xbindkeysrc refresh
 "killall xbindkeys; xbindkeys"
 Mod4 + XF86MonBrightnessDown
 
+#htop
 "xfce4-terminal --hide-menubar -e htop"
 Mod4 + h
 
+#alsamixer
 "xfce4-terminal --hide-menubar -e 'alsamixer -c 1'"
 Mod4 + m
 
@@ -29,6 +35,7 @@ Mod4 + m
 "/home/aaron/scripts/muteall.sh"
 Mod4 + slash
 
+#open firefox
 "/opt/firefox/firefox"
 Mod4 + f
 
@@ -36,12 +43,15 @@ Mod4 + f
 "/opt/firefox/firefox workflowy.com"
 Mod4 + w
 
+#open google calendar
 "/opt/firefox/firefox calendar.google.com"
 Mod4 + c
 
+#run xkill
 "xkill"
 Mod4 + Shift + x
 
+#open vimrc
 "gvim /home/aaron/.vimrc"
 Mod4 + Shift + v
 
@@ -73,17 +83,11 @@ Control + Alt + p
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/10m_timer_wrapper.sh"
 Mod4 + shift + 6
 
-#start 10m timer
+#start 10m timer AND make a timestamped note (two things bound to one keybinding)
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/10m_timer_wrapper.sh"
 Mod4 + shift + 7
-
-#make a timestamped note
 "gvim /home/aaron/notes/note_$(date '+%m-%d-%y_%H-%M-%S').txt"
 Mod4 + Shift + 7
-
-#adjust the window size (doesn't work)
-#"sleep 2; /home/aaron/scripts/adjust_journal_window.sh"
-#Mod4 + Shift + 7
 
 #volume up
 "amixer -D pulse sset Master 4%+"
@@ -109,9 +113,11 @@ Shift + XF86AudioLowerVolume
 #"amixer -D pulse sset Master unmute"
 #XF86AudioMute + Shift
 
+#open a python prompt
 "xfce4-terminal --hide-menubar -e python3"
 Mod4 + Shift + P
 
+#open nautilus
 "nautilus"
 Mod4 + n
 
@@ -127,11 +133,11 @@ Mod4 + Shift + l
 "/opt/firefox/firefox gen.lib.rus.ec"
 Mod4 + Shift + g
 
-#ebay
+#open ebay
 "/opt/firefox/firefox ebay.com"
 Mod4 + Shift + e
 
-#scihub
+#open scihub
 "/opt/firefox/firefox scihub.to"
 Mod4 + Shift + h
 
@@ -139,15 +145,15 @@ Mod4 + Shift + h
 "/home/aaron/scripts/area_screen.sh"
 Mod4 + 0
 
-#take an 400x400 gif and matched still image
+#take a 400x400 gif and matched still image
 "/home/aaron/scripts/area_gif.sh"
 Mod4 + g
 
-#yoga hotkey
+#10m yoga hotkey
 "/opt/firefox/firefox https://www.youtube.com/watch?v=D9q5WsMk4ro"
 Mod4 + y
 
-#7-min workout hotkey
+#7m workout hotkey
 "/opt/firefox/firefox https://www.youtube.com/watch?v=Jru5B044HOs"
 Mod4 + 7
 
@@ -159,27 +165,27 @@ Mod4 + q
 "/home/aaron/scripts/truisms.sh"
 Mod4 + Shift + q
 
-#pomodoro hotkey
+#start a 25m pomodoro
 "sleep .1; bash /home/aaron/scripts/pomodoro.sh &"
 Mod4 + BackSpace
 
-#long pomodoro hotkey
+#start a 50m pomodoro
 "sleep .1; bash /home/aaron/scripts/pomodoro.sh -m 50 &"
 Alt + Mod4 + BackSpace
 
-#view logged pomodoros:
+#view logged pomodoros
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/list_pomodoros.sh"
 Shift + Mod4 + Delete
 
-#what are you working on?
+#"what are you working on?"
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/goalbanner.sh"
 Mod4 + Shift + BackSpace
 
-#arandr (screen setup)
+#arandr (xrandr gui)
 "arandr"
 Mod4 + shift + a
 
-#bed screen layout:
+#bed screen layout (requires VGA to be connected to a screen)
 "/home/aaron/.screenlayout/bed_config.sh"
 Mod4 + shift + s
 
