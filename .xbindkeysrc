@@ -1,21 +1,24 @@
+#open gvim (not in a terminal)
 "gvim"
 Mod4 + v
 
+#open cronometer (for food tracking)
 "/opt/firefox/firefox cronometer.com"
 Mod4 + shift + f
 
+#open this config file in vim
 "gvim /home/aaron/.xbindkeysrc"
 Mod4 + shift + k
 
-#open bashrc in vim:
+#open bashrc in vim
 "gvim /home/aaron/.bashrc"
 Mod4 + b
 
-#open i3wm config file:
+#open i3wm config file
 "gvim /home/aaron/.i3/config"
 Mod4 + Shift + i
 
-#refresh xbindkeys with the current config file:
+#refresh xbindkeys with the current config file
 "killall xbindkeys; xbindkeys"
 Mod4 + r
 
@@ -23,11 +26,11 @@ Mod4 + r
 "killall xbindkeys; xbindkeys"
 Mod4 + XF86MonBrightnessDown
 
-#htop
+#open htop in a terminal
 "xfce4-terminal --hide-menubar -e htop"
 Mod4 + h
 
-#alsamixer
+#open alsamixer in a terminal
 "xfce4-terminal --hide-menubar -e 'alsamixer -c 1'"
 Mod4 + m
 
@@ -35,7 +38,7 @@ Mod4 + m
 "/home/aaron/scripts/muteall.sh"
 Mod4 + slash
 
-#open firefox
+#open a new firefox window
 "/opt/firefox/firefox"
 Mod4 + f
 
@@ -55,7 +58,7 @@ Mod4 + Shift + x
 "gvim /home/aaron/.vimrc"
 Mod4 + Shift + v
 
-#make a timestamped note
+#open a new timestamped note in vim
 "gvim /home/aaron/notes/note_$(date '+%m-%d-%y_%H-%M-%S').txt"
 Mod4 + Shift + n
 
