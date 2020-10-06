@@ -78,6 +78,10 @@ Mod4 + p
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/stonks.sh"
 Mod4 + Shift + 4
 
+#sp500 marketwatch
+"/opt/firefox/firefox https://www.marketwatch.com/investing/index/spx"
+Mod4 + Shift + 5
+
 #ping google 3 times. (alternate keybinding)
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/pinger.sh"
 Control + Alt + p
