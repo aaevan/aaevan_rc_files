@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "zeroing out PCM level...";
 amixer -c 1 -- set PCM -51dB > /dev/null
-echo "Read for 30 minutes!";
-sleep 30m;
+#echo "Read for 30 minutes!";
+#sleep 30m;
 echo "Sleeping for 8 hours...";
 sleep 8h;
 echo "playing spotify... (`date '+%H:%M:%S'`)"
