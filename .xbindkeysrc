@@ -3,7 +3,7 @@
 Mod4 + v
 
 #open cronometer (for food tracking)
-"/opt/firefox/firefox cronometer.com"
+"firefox cronometer.com"
 Mod4 + shift + f
 
 #open this config file in vim
@@ -39,15 +39,15 @@ Mod4 + m
 Mod4 + slash
 
 #open a new firefox window
-"/opt/firefox/firefox"
+"firefox"
 Mod4 + f
 
 #open workflowy
-"/opt/firefox/firefox workflowy.com"
+"firefox workflowy.com"
 Mod4 + w
 
 #open google calendar
-"/opt/firefox/firefox calendar.google.com"
+"firefox calendar.google.com"
 Mod4 + c
 
 #run xkill
@@ -67,7 +67,7 @@ Mod4 + Shift + n
 Mod4 + Shift + r
 
 #display list of commits to config files
-"/opt/firefox/firefox https://github.com/aaevan/aaevan_rc_files/commits/master"
+"firefox https://github.com/aaevan/aaevan_rc_files/commits/master"
 Mod4 + Shift + Control + r
 
 #ping google 3 times.
@@ -79,7 +79,7 @@ Mod4 + p
 Mod4 + Shift + 4
 
 #sp500 marketwatch
-"/opt/firefox/firefox https://www.marketwatch.com/investing/index/spx"
+"firefox https://www.marketwatch.com/investing/index/spx"
 Mod4 + Shift + 5
 
 #ping google 3 times. (alternate keybinding)
@@ -97,11 +97,11 @@ Mod4 + shift + 7
 Mod4 + Shift + 7
 
 #volume up
-"amixer -D pulse sset Master 4%+"
+"amixer -D pulse sset Master 2%+"
 XF86AudioRaiseVolume
 
 #volume down
-"amixer -D pulse sset Master 4%-"
+"amixer -D pulse sset Master 2%-"
 XF86AudioLowerVolume
 
 #volume SMALL-up
@@ -129,27 +129,27 @@ Mod4 + Shift + P
 Mod4 + n
 
 #rick astley
-"/opt/firefox/firefox https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+"firefox https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 Mod4 + 8
 
 #bodies hit the floor
-"/opt/firefox/firefox https://youtu.be/04F4xlWSFh0?t=60"
+"firefox https://youtu.be/04F4xlWSFh0?t=60"
 Mod4 + Shift + 9
 
 #close my eyes
-"/opt/firefox/firefox https://youtu.be/Ss0kFNUP4P4?t=1m11s"
+"firefox https://youtu.be/Ss0kFNUP4P4?t=1m11s"
 Mod4 + Shift + l
 
 #gen.lib.rus.ec
-"/opt/firefox/firefox gen.lib.rus.ec"
+"firefox gen.lib.rus.ec"
 Mod4 + Shift + g
 
 #open ebay
-"/opt/firefox/firefox ebay.com"
+"firefox ebay.com"
 Mod4 + Shift + e
 
 #open scihub
-"/opt/firefox/firefox scihub.to"
+"firefox scihub.to"
 Mod4 + Shift + h
 
 #take an area screenshot
@@ -161,11 +161,11 @@ Mod4 + 0
 Mod4 + g
 
 #10m yoga hotkey
-"/opt/firefox/firefox https://www.youtube.com/watch?v=D9q5WsMk4ro"
+"firefox https://www.youtube.com/watch?v=D9q5WsMk4ro"
 Mod4 + y
 
 #7m workout hotkey
-"/opt/firefox/firefox https://www.youtube.com/watch?v=Jru5B044HOs"
+"firefox https://www.youtube.com/watch?v=Jru5B044HOs"
 Mod4 + 7
 
 #survival series quote (requires libxosd)
@@ -279,7 +279,7 @@ Shift + Mod4 + period
 Shift + Mod4 + comma
 
 #open a random interviewcake problem:
-"/opt/firefox/firefo/opt/firefox/firefox https://www.interviewcake.com/random-question"
+"firefox https://www.interviewcake.com/random-question"
 Shift + Mod4 + c
 
 #record 10s of audio and view recording in spek
