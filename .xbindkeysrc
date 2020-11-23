@@ -90,10 +90,10 @@ Control + Alt + p
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/10m_timer_wrapper.sh"
 Mod4 + shift + 6
 
-#start 10m timer AND make a timestamped note (two things bound to one keybinding)
+#start 10m timer AND make a templated timestamped note (two things bound to one keybinding)
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/10m_timer_wrapper.sh"
 Mod4 + shift + 7
-"gvim /home/aaron/notes/note_$(date '+%m-%d-%y_%H-%M-%S').txt"
+"~/scripts/templated_timestamped_note.sh"
 Mod4 + Shift + 7
 
 #volume up
