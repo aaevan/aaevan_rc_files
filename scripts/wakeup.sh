@@ -12,6 +12,6 @@ for i in `seq -51 .2 0`
 do
     echo "setting volume to ${i}dB..."
     amixer -c 1 -- set PCM ${i}dB > /dev/null
-    sleep 4
+    sleep 3
 done
 echo "finished at `date '+%H:%M:%S'`"

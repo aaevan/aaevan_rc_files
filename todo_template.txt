@@ -1,24 +1,22 @@
 
-[ ] put on clothes, bathroom, brush teeth
-[ ] journal
+[ ] feet on floor at or before 10:10am?
+[ ] put on clothes, bathroom, brush teeth, 
+[ ] weigh in and log on android app
+[ ] journal 10m
 [ ] meditate 10m
-[ ] 10m room unfuck
 [ ] anki catchup
-[ ] take C&D @ 2pm
+[ ] 10m room unfuck
+[ ] take C, D and brazil nuts @ 2pm
 [ ] work from a textbook (1+ pomodoros)
-[ ] walk around trail
+[ ] put on shoes and walk around trail
 [ ] read overcoming gravity or BaSL >= 10m
 [ ] screens off at 12
-[ ] floss teeth
-[ ] bathroom, floss, brush teeth & shower
+[ ] floss, brush teeth & shower
 [ ] 15m body maintenance
 [ ] lights off at 2
+[ ] track food on cronometer
 
 pomodoros:
-10 to 12: [ ][ ][ ][ ]
-12 to 2 : [ ][ ][ ][ ]
- 2 to 4 : [ ][ ][ ][ ]
- 4 to 6 : [ ][ ][ ][ ]
- 6 to 8 : [ ][ ][ ][ ]
+[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 
 
