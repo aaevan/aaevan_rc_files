@@ -6,6 +6,10 @@ Mod4 + v
 "firefox cronometer.com"
 Mod4 + shift + f
 
+#open cronometer (for food tracking)
+"firefox https://tools.myfooddata.com/nutrient-ranking-tool/"
+Shift + Alt + Mod4 + f
+
 #open this config file in vim
 "gvim /home/aaron/.xbindkeysrc"
 Mod4 + shift + k
@@ -44,6 +48,10 @@ Mod4 + f
 
 #open workflowy
 "firefox workflowy.com"
+Mod4 + Shift + w
+
+#open "what are you doing?" script
+"/home/aaron/scripts/task_log_wrapper.sh"
 Mod4 + w
 
 #open google calendar
