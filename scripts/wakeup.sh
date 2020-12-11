@@ -25,3 +25,5 @@ echo "finished volume ramp at $end_ramp_time"
 echo "started script: $start_time"
 echo "started ramp: $start_ramp_time"
 echo "ended ramp: $end_ramp_time"
+echo "--------------------------------------------------------------------------------" >> ~/task_log.txt
+
