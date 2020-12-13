@@ -294,3 +294,7 @@ Shift + Mod4 + c
 #"arecord -vv -fdat -d 10 test.wav; spek test.wav"
 "/home/aaron/scripts/10s_spek.sh"
 Mod4 + 9
+
+#open a list of what I've done during this continuous wake-cycle
+"xfce4-terminal --hide-menubar -e ~/scripts/what_I_did.sh"
+Mod4 + Home
