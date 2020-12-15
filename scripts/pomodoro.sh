@@ -112,6 +112,7 @@ function stopwatch(){
         done
 }
 
+aplay ~/bell.wav &
 echo BEGIN! | osd_cat --pos=middle --align=center --color=#00ff00 --font=$big_font --outline=4 --offset=-100 -d 2 &
 countdown_osd $MINUTES $SECONDS red
 
@@ -120,6 +121,7 @@ echo "$MINUTES minute pomodoro finished on `date --rfc-3339='second'`" >> ~/pomo
 flash "TAKE A BREAK" six times:
 for k in `seq 0 6`;
 do
+    aplay ~/bell.wav &
     echo TAKE A BREAK!| osd_cat --pos=middle --align=center --color=green --font=$big_font --outline=4 --offset=-100 -d 1 &
         sleep .5
         killall osd_cat
@@ -129,6 +131,7 @@ done
 countdown_osd $break_minutes $break_seconds green
 
 if [ $WILL_BREAK -eq 1 ];
+    aplay ~/bell.wav &
     then
         message_text="AGAIN? (`./scripts/echo_current_i3_workspace.sh`)"
         echo $message_text| osd_cat --pos=middle --align=center --color=red --font=$big_font --outline=4 --offset=-100 -d 999 &
