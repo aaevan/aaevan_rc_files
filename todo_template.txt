@@ -6,19 +6,21 @@
 [ ] journal 10m
 [ ] anki catchup
 [ ] do 4 pomodoros before eating lunch
+[ ] do 4 pomodoros before 8PM
 [ ] take C, D and brazil nuts @ 2pm
+[ ] track food on cronometer
 [ ] work from a textbook (1+ pomodoros)
 [ ] put on shoes and walk around trail
-[ ] read overcoming gravity or BaSL >= 10m
+[ ] read Overcoming Gravity or BaSL >= 10m
 [ ] 10m room unfuck
 [ ] screens off at 12
 [ ] floss, brush teeth & shower
 [ ] 15m body maintenance
 [ ] in bed at 01:30
 [ ] lights off at 02:00
-[ ] track food on cronometer
 
 pomodoros:
-[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+[ ][ ][ ][ ]|[ ][ ][ ][ ]|[ ][ ]
+            2            8
 
 

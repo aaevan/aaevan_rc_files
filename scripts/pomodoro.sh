@@ -119,7 +119,7 @@ countdown_osd $MINUTES $SECONDS red
 echo "$MINUTES minute pomodoro finished on `date --rfc-3339='second'`" >> ~/pomodoro_log.txt
 
 flash "TAKE A BREAK" six times:
-for k in `seq 0 6`;
+for k in `seq 0 3`;
 do
     aplay ~/bell.wav &
     echo TAKE A BREAK!| osd_cat --pos=middle --align=center --color=green --font=$big_font --outline=4 --offset=-100 -d 1 &
