@@ -26,4 +26,5 @@ echo "started script: $start_time"
 echo "started ramp: $start_ramp_time"
 echo "ended ramp: $end_ramp_time"
 echo "----------------------------------------" >> ~/task_log.txt
+echo "----------------------------------------" >> ~/pomodoro_log.txt
 
