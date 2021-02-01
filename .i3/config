@@ -19,6 +19,8 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
+#open a terminal at the last cd'd to directory:
+bindsym $mod+Shift+Return exec /home/aaron/scripts/last_cd_term.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill

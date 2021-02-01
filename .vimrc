@@ -56,8 +56,8 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 
 " Make N and L go to the beginning and ends of a line easily
-nnoremap H ^
-nnoremap L g_
+" nnoremap H ^
+" nnoremap L g_
 
 " Make , repeat the last single line find (;)
 " and repeat the last command (.)
