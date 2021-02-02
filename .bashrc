@@ -101,6 +101,7 @@ alias x='exit'
 alias h='cd ~/'
 alias C='cd ~/Code'
 alias D='cd ~/Downloads'
+alias nt='~/scripts/last_cd_term.sh'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like

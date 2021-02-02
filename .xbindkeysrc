@@ -1,6 +1,6 @@
 #open a terminal at the last cd'd to directory:
 "~/scripts/last_cd_term.sh"
-Shift + Alt + Return
+Shift + Mod4 + Return
 
 #open gvim (not in a terminal)
 "gvim"
