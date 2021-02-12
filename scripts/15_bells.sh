@@ -7,7 +7,7 @@ done
 
 sleep 1
 
-for i in `seq 16`
+for i in `seq 15`
     do
         echo "($i)"
         aplay ~/scripts/bell.wav -q &

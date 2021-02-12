@@ -195,6 +195,10 @@ Mod4 + BackSpace
 #start a 50m pomodoro
 "sleep .1; bash /home/aaron/scripts/pomodoro.sh -m 50 &"
 Alt + Mod4 + BackSpace
+#
+#start a 50m pomodoro (second binding
+"sleep .1; bash /home/aaron/scripts/pomodoro.sh -m 50 &"
+Control + Shift + Print
 
 #view logged pomodoros
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/list_pomodoros.sh"
