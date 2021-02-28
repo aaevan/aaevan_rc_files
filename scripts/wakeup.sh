@@ -5,7 +5,7 @@ echo "zeroing out PCM level...";
 amixer -c 1 -- set PCM -51dB > /dev/null
 amixer -c 2 -- set Speaker -51dB > /dev/null
 echo "sleeping for 8 hours...";
-#sleep 8h;
+sleep 8h;
 start_ramp_time=`date '+%H:%M:%S'`
 echo "starting volume ramp-up at $start_ramp_time..."
 echo "playing spotify... (`date '+%H:%M:%S'`)"
