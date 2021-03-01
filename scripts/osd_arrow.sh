@@ -5,8 +5,10 @@ y_real=$(($Y - 37))
 DURATION=10
 DIRECTION='left'
 string_output="-->"
+outline_width=3
+fontsize=60
 
-while getopts ":d:rl" opt; do
+while getopts ":d:rlw" opt; do
   case $opt in
     d)
       echo "-d was triggered, Parameter: $OPTARG" >&2
@@ -19,6 +21,10 @@ while getopts ":d:rl" opt; do
     l)
       echo "-l was triggered, Parameter: $OPTARG" >&2
       DIRECTION='left'
+      ;;
+    w)
+      echo "-w was triggered, Parameter: $OPTARG" >&2
+      DIRECTION='blank'
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
@@ -37,14 +43,26 @@ if [ $DIRECTION == "left" ]; then
     echo "to the left!"
     x_real=$(($x_resolution - $X - 10))
     y_real=$(($Y - 37))
+    color='green'
+    outline_color='black'
     string_output="-->"
 elif [ $DIRECTION == "right" ]; then
     echo "to the right!"
     x_real=$(($x_resolution - $X - 84))
     y_real=$(($Y - 37))
+    color='green'
+    outline_color='black'
     string_output="<--"
+elif [ $DIRECTION == "blank" ]; then
+    echo "white out!"
+    x_real=$(($x_resolution - $X - 84))
+    y_real=$(($Y - 37))
+    color='white'
+    outline_color='white'
+    outline_width=5
+    string_output="||||||||"
 fi
 
 
-echo $string_output | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y_real -i $x_real -d $DURATION -O 3 --color=green &
+echo $string_output | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-$fontsize-*-*-*-*-*-*-* --offset=$y_real -i $x_real -d $DURATION -O 3 --color=$color --outlinecolour=$outline_color --outline=$outline_width &
 echo x:$X y:$Y

@@ -67,7 +67,7 @@ def bin_str_to_coords(bin_str, coord_dict):
 
 
 def bin_str_to_pretty_output(bin_str='010101101010', row=(), line_length=6):
-    center_dist, sum_dists, bin_perm, egg_coords = row
+    center_dist, sum_dists, binary_perm, egg_coords = row
     output_list = []
     for index, char in enumerate(bin_str):
         if char == '1':
@@ -76,11 +76,11 @@ def bin_str_to_pretty_output(bin_str='010101101010', row=(), line_length=6):
             output_list.append('○')
     str_output = ''.join(output_list)
     first_egg_row, second_egg_row = str_output[:6], str_output[6:]
-    line_1 = f'{first_egg_row}  center_dist   sum_dists     bin_perm      egg_coords'
+    line_1 = f'{first_egg_row}  center_dist   sum_dists     binary_perm   egg_coords'
     formatted_row = "{0:<14}{1:<14}{2:<14}{3:<14}".format(
         round(center_dist, 8),
         round(sum_dists, 8), 
-        bin_perm,
+        binary_perm,
         str(egg_coords),
     )
     line_2 = f'{second_egg_row}  {formatted_row}'
