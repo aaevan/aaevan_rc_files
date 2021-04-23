@@ -1,5 +1,7 @@
 eval $(xdotool getmouselocation --shell)
+echo "$X, $Y, $SCREEN, $WINDOW"
 x_resolution=1600
+#x_resolution=2650
 x_real=$(($x_resolution - $X - 10))
 y_real=$(($Y - 37))
 DURATION=10
@@ -65,4 +67,5 @@ fi
 
 
 echo $string_output | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-$fontsize-*-*-*-*-*-*-* --offset=$y_real -i $x_real -d $DURATION -O 3 --color=$color --outlinecolour=$outline_color --outline=$outline_width &
+echo $string_output | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-$fontsize-*-*-*-*-*-*-* --offset=$Y -i $X -d $DURATION -O 3 --color=red --outlinecolour=$outline_color --outline=$outline_width &
 echo x:$X y:$Y

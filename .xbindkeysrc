@@ -154,6 +154,7 @@ Mod4 + Shift + l
 
 #gen.lib.rus.ec
 "firefox gen.lib.rus.ec"
+#"firefox libgen.fun"
 Mod4 + Shift + g
 
 #open ebay
@@ -293,10 +294,10 @@ Shift + Mod4 + period
 #put an osd_cat arrow on the screen to the right of the cursor
 "/home/aaron/scripts/wrapper_right.sh"
 Shift + Mod4 + comma
-#
+
 #put an osd_cat arrow on the screen to the left of the cursor
 "/home/aaron/scripts/wrapper_whiteout.sh"
-Shift + Mod4 + slash
+Shift + Mod4 + space
 
 #open a random interviewcake problem:
 "firefox https://www.interviewcake.com/random-question"

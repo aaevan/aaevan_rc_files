@@ -1,4 +1,7 @@
 #exercise bell!
+echo "waiting 30 seconds..."
+sleep 30
+echo "Starting!"
 for i in `seq 3`
     do
     aplay ~/scripts/bell.wav -q &
