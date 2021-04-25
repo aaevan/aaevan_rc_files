@@ -153,16 +153,16 @@ Mod4 + Shift + 9
 Mod4 + Shift + l
 
 #gen.lib.rus.ec
-"firefox gen.lib.rus.ec"
-#"firefox libgen.fun"
+#"firefox gen.lib.rus.ec"
+"firefox libgen.rs"
 Mod4 + Shift + g
 
 #open ebay
 "firefox ebay.com"
-Mod4 + Shift + e
+Mod4 + e
 
 #open scihub
-"firefox scihub.to"
+"firefox https://sci-hub.it.nf/"
 Mod4 + Shift + h
 
 #take an area screenshot
