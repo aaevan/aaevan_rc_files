@@ -161,6 +161,10 @@ Mod4 + Shift + g
 "firefox ebay.com"
 Mod4 + e
 
+#open craigslist
+"firefox https://westernmass.craigslist.org/"
+Shift + Mod4 + c
+
 #open scihub
 "firefox https://sci-hub.it.nf/"
 Mod4 + Shift + h
@@ -298,10 +302,6 @@ Shift + Mod4 + comma
 #put an osd_cat arrow on the screen to the left of the cursor
 "/home/aaron/scripts/wrapper_whiteout.sh"
 Shift + Mod4 + space
-
-#open a random interviewcake problem:
-"firefox https://www.interviewcake.com/random-question"
-Shift + Mod4 + c
 
 #record 10s of audio and view recording in spek
 #"arecord -vv -fdat -d 10 test.wav; spek test.wav"
