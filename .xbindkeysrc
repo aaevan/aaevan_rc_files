@@ -166,7 +166,7 @@ Mod4 + e
 Shift + Mod4 + c
 
 #open scihub
-"firefox https://sci-hub.it.nf/"
+"firefox https://sci-hub.do"
 Mod4 + Shift + h
 
 #take an area screenshot

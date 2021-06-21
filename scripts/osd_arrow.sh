@@ -67,5 +67,5 @@ fi
 
 
 echo $string_output | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-$fontsize-*-*-*-*-*-*-* --offset=$y_real -i $x_real -d $DURATION -O 3 --color=$color --outlinecolour=$outline_color --outline=$outline_width &
-echo $string_output | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-$fontsize-*-*-*-*-*-*-* --offset=$Y -i $X -d $DURATION -O 3 --color=red --outlinecolour=$outline_color --outline=$outline_width &
+#echo $string_output | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-$fontsize-*-*-*-*-*-*-* --offset=$Y -i $X -d $DURATION -O 3 --color=red --outlinecolour=$outline_color --outline=$outline_width &
 echo x:$X y:$Y
