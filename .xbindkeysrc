@@ -37,6 +37,10 @@ Mod4 + XF86MonBrightnessDown
 #open htop in a terminal
 "xfce4-terminal --hide-menubar -e htop"
 Mod4 + h
+#
+#open firefox's built-in tab-by-tab task manager:
+"firefox about:performance"
+Mod4 + a
 
 #open alsamixer in a terminal
 "xfce4-terminal --hide-menubar -e 'alsamixer -c 1'"
