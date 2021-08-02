@@ -46,10 +46,6 @@ Mod4 + a
 "xfce4-terminal --hide-menubar -e 'alsamixer -c 1'"
 Mod4 + m
 
-#mute everything
-"/home/aaron/scripts/muteall.sh"
-Mod4 + slash
-
 #open a new firefox window
 "firefox"
 Mod4 + f
