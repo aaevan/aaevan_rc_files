@@ -1,13 +1,12 @@
-
+[ ] journal 10m
 [ ] feet on floor at or before 10:10am?
 [ ] take b12 first thing
 [ ] put on clothes, bathroom, brush teeth, 
-[ ] weigh in and log on android app
+[ ] weigh in and log on phone app
 [ ] meditate 10m
-[ ] journal 10m
 [ ] anki catchup
 [ ] do 4 pomodoros before eating lunch
-[ ] take C, D and brazil nuts @ 2pm
+[ ] take C, D and brazil nuts @ 1pm
 [ ] eat lunch
 [ ] put on shoes and walk around trail
 [ ] track food on cronometer
@@ -15,14 +14,20 @@
 [ ] work from a textbook (1+ pomodoros)
 [ ] read Overcoming Gravity or BaSL >= 10m
 [ ] 10m room unfuck
-[ ] screens off at 12
+[ ] screens off at or before midnight
 [ ] floss, brush teeth & shower
 [ ] 15m body maintenance
-[ ] in bed at 01:30
-[ ] lights off at 02:00
+[ ] in bed at 12:30
+[ ] lights off at 01:30
 
-pomodoros:
-[ ][ ][ ][ ]|[ ][ ][ ][ ]|[ ][ ]
-            2            8
+daily reflections (5-10 bullets each)
 
+What excited me?
 
+What drained me of energy?
+
+What did I learn?
+
+What are the 10 things I'm grateful for?
+
+How did I push the needle forward?
