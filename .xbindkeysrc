@@ -218,7 +218,7 @@ Mod4 + Shift + BackSpace
 Mod4 + shift + a
 
 #bed screen layout (requires VGA to be connected to a screen)
-"/home/aaron/.screenlayout/bed_config.sh"
+"/home/aaron/.screenlayout/single_screen_bed.sh"
 Mod4 + shift + s
 
 #default screen layout:
