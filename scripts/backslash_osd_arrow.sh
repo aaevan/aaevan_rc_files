@@ -25,7 +25,7 @@ echo x1:$x1 y1:$y1 x2:$x2 y2:$y2 x3:$x3 y3:$y3
 #I've gotta figure out how to get absolute coordinates with multiple screens 
 # and translate that to what osd_cat uses.
 
-echo . | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y3 -i $x3 -d 60 --color="#ff0000" &
-echo . | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y4 -i $x4 -d 60 --color="#00ff00" &
-echo . | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y3 -i $x4 -d 60 --color="#0000ff" &
-echo . | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y4 -i $x3 -d 60 --color="#ffffff" &
+echo 1. | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y3 -i $x3 -d 60 --color="#ff0000" &
+echo 2. | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y4 -i $x4 -d 60 --color="#00ff00" &
+echo 3. | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y3 -i $x4 -d 60 --color="#0000ff" &
+echo 4. | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y4 -i $x3 -d 60 --color="#ffffff" &
