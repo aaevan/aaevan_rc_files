@@ -24,7 +24,7 @@ echo x1:$x1 y1:$y1 x2:$x2 y2:$y2 x3:$x3 y3:$y3
 
 #does weird bullshit with multiple screens.
 #I've gotta figure out how to get absolute coordinates with multiple screens 
-# and translate that to what osd_cat uses.
+# ... and translate that to what osd_cat uses.
 
 #debug
 #echo 1. | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y3 -i $x3 -d 60 --color="#ff0000" &
@@ -32,15 +32,16 @@ echo x1:$x1 y1:$y1 x2:$x2 y2:$y2 x3:$x3 y3:$y3
 #echo 3. | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y3 -i $x4 -d 60 --color="#0000ff" &
 #echo 4. | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y4 -i $x3 -d 60 --color="#ffffff" &
 
+#horizontal (dotted) lines of box:
 for x in `seq $x4 20 $x3`
 do
-echo . | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y3 -i $x -d 60 --color="#00ff00" &
-echo . | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y4 -i $x -d 60 --color="#00ff00" &
+    echo . | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y3 -i $x -d 60 --color="#00ff00" &
+    echo . | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y4 -i $x -d 60 --color="#00ff00" &
 done
 
+#vertical (dotted) lines of box:
 for y in `seq $y3 20 $y4`
 do
-echo . | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y -i $x3 -d 60 --color="#00ff00" &
-echo . | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y -i $x4 -d 60 --color="#00ff00" &
+    echo . | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y -i $x3 -d 60 --color="#00ff00" &
+    echo . | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y -i $x4 -d 60 --color="#00ff00" &
 done
-
