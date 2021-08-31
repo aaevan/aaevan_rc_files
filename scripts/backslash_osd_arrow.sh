@@ -1,10 +1,11 @@
 #read -r width height x y <<<$(import -identify /home/aaron/screens/screenshot$(date '+%m-%d-%y_%H-%M-%S').png | awk '{print $4}' | tr "x" " " | tr "+" " ")
 
 #the identify flag gives lots of info about screenshot geometry
-#the filename should really be fed to somewhere where it's immediately deleted?
 #awk here is pulling out arguments and separating them with a space
 #tr "x" " " replaces instances of x with a space
-read -r width height screenx screeny x1 y1 <<<$(import -identify /home/aaron/screens/screenshot$(date '+%m-%d-%y_%H-%M-%S').png | awk '{print $3 " " $4}' | tr "x" " " | tr "+" " ")
+read -r width height screenx screeny x1 y1 <<<$(import -identify /tmp/outline.png | awk '{print $3 " " $4}' | tr "x" " " | tr "+" " ")
+
+#offsets for this size of period so that the larger offset lines up with the center.
 
 x_offset=19
 y_offset=45
@@ -25,7 +26,21 @@ echo x1:$x1 y1:$y1 x2:$x2 y2:$y2 x3:$x3 y3:$y3
 #I've gotta figure out how to get absolute coordinates with multiple screens 
 # and translate that to what osd_cat uses.
 
-echo 1. | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y3 -i $x3 -d 60 --color="#ff0000" &
-echo 2. | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y4 -i $x4 -d 60 --color="#00ff00" &
-echo 3. | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y3 -i $x4 -d 60 --color="#0000ff" &
-echo 4. | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y4 -i $x3 -d 60 --color="#ffffff" &
+#debug
+#echo 1. | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y3 -i $x3 -d 60 --color="#ff0000" &
+#echo 2. | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y4 -i $x4 -d 60 --color="#00ff00" &
+#echo 3. | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y3 -i $x4 -d 60 --color="#0000ff" &
+#echo 4. | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y4 -i $x3 -d 60 --color="#ffffff" &
+
+for x in `seq $x4 20 $x3`
+do
+echo . | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y3 -i $x -d 60 --color="#00ff00" &
+echo . | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y4 -i $x -d 60 --color="#00ff00" &
+done
+
+for y in `seq $y3 20 $y4`
+do
+echo . | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y -i $x3 -d 60 --color="#00ff00" &
+echo . | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y -i $x4 -d 60 --color="#00ff00" &
+done
+
