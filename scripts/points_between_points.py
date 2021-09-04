@@ -10,7 +10,9 @@ if debug:
 
 dist = sqrt((x2 - x1)**2 + (y2 - y1)**2)
 spacing = 15 #pixels
-num_points = dist // spacing
+num_points = abs(dist // spacing)
+
+print(f'dist is: {dist}, num_points is {num_points}')
 
 points = [
     *zip(

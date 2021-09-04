@@ -315,3 +315,12 @@ Shift + Alt + Mod4 + m
 #green box around selected area
 "/home/aaron/scripts/backslash_osd_arrow.sh"
 Shift + Mod4 + 8
+
+#not working right now, maybe they need wrapper scripts
+#left slanting red line:
+#"./backslash_osd_arrow.sh -d left -c '#ff0000'"
+#Mod4 + Shift + Backslash 
+#
+#right slanting red line:
+#"./backslash_osd_arrow.sh -d right -c '#ff0000'"
+#Mod4 + Shift + Slash 
