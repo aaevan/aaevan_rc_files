@@ -12,12 +12,12 @@ dist = sqrt((x2 - x1)**2 + (y2 - y1)**2)
 spacing = 15 #pixels
 num_points = abs(dist // spacing)
 
-print(f'dist is: {dist}, num_points is {num_points}')
+#print(f'dist is: {dist}, num_points is {num_points}')
 
 points = [
     *zip(
-        np.linspace(x1, y1, num=num_points), 
-        np.linspace(x2, y2, num=num_points), 
+        np.linspace(x1, y1, num=int(num_points)),
+        np.linspace(x2, y2, num=int(num_points)),
     )
 ]
 

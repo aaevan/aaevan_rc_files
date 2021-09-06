@@ -1,4 +1,4 @@
-#read -r width height x y <<<$(import -identify /home/aaron/screens/screenshot$(date '+%m-%d-%y_%H-%M-%S').png | awk '{print $4}' | tr "x" " " | tr "+" " ")
+#read -r width height x y <<<$(import -identify /home/aaron/screens/screenshot$(date '+%m-%d-%y_%H%M-%S').png | awk '{print $4}' | tr "x" " " | tr "+" " ")
 
 #the identify flag gives lots of info about screenshot geometry
 #awk here is pulling out arguments and separating them with a space
@@ -88,7 +88,7 @@ if [ $DIRECTION == "left" ]; then
     python points_between_points.py $x3 $x4 $y3 $y4 | while read line
     #python points_between_points.py $x4 $x3 $y3 $y4 | while read line
     do
-        #echo input line:$line
+        #echo input_line:$line
         read -r x_val y_val <<< $(echo $line)
         #echo x_val:$x_val y_val:$y_val
         echo . | osd_cat --pos=top --align=right --font=-*-helvetica-bold-r-*-*-60-*-*-*-*-*-*-* --offset=$y_val -i $x_val -d 60 --color=$color &
