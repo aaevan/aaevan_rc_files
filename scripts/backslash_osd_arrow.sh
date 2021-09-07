@@ -1,10 +1,5 @@
-#read -r width height x y <<<$(import -identify /home/aaron/screens/screenshot$(date '+%m-%d-%y_%H%M-%S').png | awk '{print $4}' | tr "x" " " | tr "+" " ")
 
-#the identify flag gives lots of info about screenshot geometry
-#awk here is pulling out arguments and separating them with a space
-#tr "x" " " replaces instances of x with a space
-
-color="#ff44cc"
+color="#ff44cc" #default to pink
 
 while getopts ":d:c:" opt; do
   case $opt in
@@ -26,6 +21,10 @@ while getopts ":d:c:" opt; do
       ;;
   esac
 done
+
+#the -identify flag gives lots of info about screenshot geometry
+#awk pulls out arguments and separates them with a space
+#tr "x" " " replaces instances of x with a space
 
 read -r width height screenx screeny x1 y1 <<<$(import -identify /tmp/outline.png | awk '{print $3 " " $4}' | tr "x" " " | tr "+" " ")
 
