@@ -313,8 +313,8 @@ Mod4 + Home
 Shift + Alt + Mod4 + m
 
 #left slanting red line:
-#"/home/aaron/scripts/left_line_wrapper.sh"
-"xfce4-terminal --hide-menubar -e htop"
+"xfce4-terminal --hide-menubar -e /home/aaron/scripts/left_line_wrapper.sh"
+#"xfce4-terminal --hide-menubar -e htop"
 Shift + Mod4 + u
 #
 #right slanting red line:
