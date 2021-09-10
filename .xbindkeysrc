@@ -312,11 +312,6 @@ Mod4 + Home
 "/home/aaron/scripts/monitor_shutoff.sh"
 Shift + Alt + Mod4 + m
 
-#left slanting red line:
-"xfce4-terminal --hide-menubar -e /home/aaron/scripts/left_line_wrapper.sh"
-#"xfce4-terminal --hide-menubar -e htop"
+#left slanting red line: #still doesn't work?
+"/home/aaron/scripts/left_line_wrapper.sh"
 Shift + Mod4 + u
-#
-#right slanting red line:
-#"./backslash_osd_arrow.sh -d right -c '#ff0000'"
-#Mod4 + Shift + Slash 
