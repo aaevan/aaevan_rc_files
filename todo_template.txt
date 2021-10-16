@@ -1,24 +1,25 @@
 [ ] journal 10m
-[ ] feet on floor at or before 10:10am?
-[ ] take b12 first thing
-[ ] put on clothes, bathroom, brush teeth, 
+[ ] feet on floor at or before 9am?
+[ ] take D, zinc & b12 first thing
+[ ] clothes, bathroom, brush teeth, 
 [ ] weigh in and log on phone app
-[ ] meditate 10m
-[ ] anki catchup
-[ ] do 4 pomodoros before eating lunch
-[ ] take C, D and brazil nuts @ 1pm
-[ ] eat lunch
+[ ] meditate (≥10m)
+[ ] anki catchup (≥25m)
+[ ] review distraction_list.txt
+[ ] 4 pomodoros ≤ 1pm
+[ ] take C, D and brazil nuts between 1pm & 2pm
+[ ] eat lunch between 1pm & 2pm
 [ ] put on shoes and walk around trail
 [ ] track food on cronometer
-[ ] do 4 pomodoros before 8PM
+[ ] do 4 pomodoros ≤8pm
 [ ] work from a textbook (1+ pomodoros)
-[ ] read Overcoming Gravity or BaSL >= 10m
+[ ] read Overcoming Gravity or BaSL (≥10m)
 [ ] 10m room unfuck
-[ ] screens off at or before midnight
+[ ] screens off ≥10pm
 [ ] floss, brush teeth & shower
-[ ] 15m body maintenance
-[ ] in bed at 12:30
-[ ] lights off at 01:30
+[ ] mobility practice (≥15m)
+[ ] start wind-down @ 11:30
+[ ] lights off ≤1am
 
 daily reflections (5-10 bullets each)
 
@@ -31,3 +32,6 @@ What did I learn?
 What are the 10 things I'm grateful for?
 
 How did I push the needle forward?
+
+Actionable things to improve my quality of life?
+    [ ]
