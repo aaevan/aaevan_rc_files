@@ -19,6 +19,6 @@
 monitor_state="`xset q | grep Monitor`"
 if [[ "$monitor_state" == *"is On"* ]]; then
     write_date="`date '+%m-%d-%y @ %H-%M-%S'`"
-    read -p "What are you doing right now (... at `date '+%H:%M:%S'`)? " task
+    read -p "What (in a single word) are you doing right now (... at `date '+%H:%M:%S'`)? " task
     echo "$write_date: \"$task\"" >> ~/task_log.txt
 fi
