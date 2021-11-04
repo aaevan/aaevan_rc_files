@@ -16,9 +16,6 @@
 #   Monitor is Off
 # I use "is On" instead since "on" is a substring of "Monitor".
 
-monitor_state="`xset q | grep Monitor`"
-if [[ "$monitor_state" == *"is On"* ]]; then
-    write_date="`date '+%m-%d-%y @ %H-%M-%S'`"
-    read -p "What (in a single word) are you doing right now (... at `date '+%H:%M:%S'`)? " task
-    echo "$write_date: \"$task\"" >> ~/task_log.txt
-fi
+write_date="`date '+%m-%d-%y @ %H-%M-%S'`"
+read -p "In a single word, what were you doing at `date '+%H:%M'`? " task
+echo "$write_date: \"$task\"" >> ~/task_log.txt
