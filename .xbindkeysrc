@@ -311,3 +311,7 @@ Mod4 + Home
 #put monitor into sleep mode after 1s wait
 "/home/aaron/scripts/monitor_shutoff.sh"
 Shift + Alt + Mod4 + m
+
+#ohhh
+"xfce4-terminal --hide-menubar -e ~/scripts/ohhh.sh"
+Mod4 + shift + o
