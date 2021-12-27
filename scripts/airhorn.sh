@@ -5,6 +5,6 @@
 #export to .WAV (other formats probably work)
 #place audio file in relevant directory (~/Scripts in this case)
 
-echo playing "ohhh" sound effect
+echo playing "airhorn" sound effect
 #play sound effect and pipe text output of aplay to /dev/null
-aplay ~/scripts/orc_audio.wav >/dev/null 2>&1
+aplay ~/scripts/airhorn.wav >/dev/null 2>&1

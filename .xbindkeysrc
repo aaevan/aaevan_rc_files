@@ -142,7 +142,7 @@ Mod4 + 8
 
 #bodies hit the floor
 "firefox https://youtu.be/04F4xlWSFh0?t=60"
-Mod4 + Shift + 9
+Mod4 + Shift + 8
 
 #close my eyes
 "firefox https://youtu.be/Ss0kFNUP4P4?t=1m11s"
@@ -315,3 +315,7 @@ Shift + Alt + Mod4 + m
 #ohhh
 "xfce4-terminal --hide-menubar -e ~/scripts/ohhh.sh"
 Mod4 + shift + o
+
+#airhorn
+"xfce4-terminal --hide-menubar -e ~/scripts/airhorn.sh"
+Mod4 + shift + 9
