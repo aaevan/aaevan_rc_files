@@ -37,7 +37,7 @@ Mod4 + XF86MonBrightnessDown
 #open htop in a terminal
 "xfce4-terminal --hide-menubar -e htop"
 Mod4 + h
-#
+
 #open firefox's built-in tab-by-tab task manager:
 "firefox about:performance"
 Mod4 + a
@@ -120,13 +120,9 @@ Shift + XF86AudioRaiseVolume
 "amixer -D pulse sset Master 1%-"
 Shift + XF86AudioLowerVolume
 
-#volume mute
-#"amixer -D pulse sset Master mute"
-#XF86AudioMute
-
-#volume unmute
-#"amixer -D pulse sset Master unmute"
-#XF86AudioMute + Shift
+#volume mute/unmute
+"~/scripts/muter.sh"
+XF86AudioMute
 
 #open a python prompt
 "xfce4-terminal --hide-menubar -e python3"
