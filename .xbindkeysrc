@@ -107,17 +107,25 @@ Mod4 + Shift + 7
 #volume up
 "amixer -D pulse sset Master 2%+"
 XF86AudioRaiseVolume
+"~/scripts/volume_osd.sh"
+XF86AudioRaiseVolume
 
 #volume down
 "amixer -D pulse sset Master 2%-"
+XF86AudioLowerVolume
+"~/scripts/volume_osd.sh"
 XF86AudioLowerVolume
 
 #volume SMALL-up
 "amixer -D pulse sset Master 1%+"
 Shift + XF86AudioRaiseVolume
+"~/scripts/volume_osd.sh"
+Shift + XF86AudioRaiseVolume
 
 #volume SMALL-down
 "amixer -D pulse sset Master 1%-"
+Shift + XF86AudioLowerVolume
+"~/scripts/volume_osd.sh"
 Shift + XF86AudioLowerVolume
 
 #volume mute/unmute
