@@ -304,7 +304,6 @@ Shift + Mod4 + comma
 Shift + Mod4 + space
 
 #record 10s of audio and view recording in spek
-#"arecord -vv -fdat -d 10 test.wav; spek test.wav"
 "/home/aaron/scripts/10s_spek.sh"
 Mod4 + 9
 
