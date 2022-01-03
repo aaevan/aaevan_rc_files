@@ -317,6 +317,7 @@ Shift + Alt + Mod4 + m
 
 #ohhh
 "xfce4-terminal --hide-menubar -e ~/scripts/ohhh.sh"
+#"xfce4-terminal --hide-menubar -e ~/scripts/sound_effect.sh orc_audio.wav"
 Mod4 + shift + o
 
 #airhorn
