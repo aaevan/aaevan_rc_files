@@ -11,3 +11,6 @@ mv vim-vividchalk-master/colors/* ~/.vim/colors/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 gvim +PluginInstall +qall
 #add autocomplete for npm
+
+#in firefox's about:config, make sure to set full-screen-api.ignore-widgets to true
+#makes i3 play nicely with other windows when in fullscreen.

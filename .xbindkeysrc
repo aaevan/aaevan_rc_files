@@ -312,13 +312,13 @@ Mod4 + Home
 Shift + Alt + Mod4 + m
 
 #ohhh
-"xfce4-terminal --hide-menubar --command=`~/scripts/sound_effect.sh orc_audio.wav`"
+"~/scripts/sound_effect.sh orc_audio.wav"
 Mod4 + shift + o
 
 #airhorn
-"xfce4-terminal --hide-menubar --command=`~/scripts/sound_effect.sh airhorn.wav`"
+"~/scripts/sound_effect.sh ~/scripts/airhorn.wav"
 Mod4 + shift + 9
-#
+ 
 #rimshot
-"xfce4-terminal --hide-menubar --command=`~/scripts/sound_effect.sh rimshot.wav`"
+"~/scripts/sound_effect.sh ~/scripts/rimshot.wav"
 Mod4 + shift + 8
