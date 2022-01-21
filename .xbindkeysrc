@@ -58,7 +58,7 @@ Mod4 + w
 "firefox calendar.google.com"
 Mod4 + c
 
-#run xkill
+#xkill
 "xkill"
 Mod4 + Shift + x
 
@@ -197,7 +197,7 @@ Mod4 + BackSpace
 "sleep .1; bash /home/aaron/scripts/pomodoro.sh -m 50 &"
 Alt + Mod4 + BackSpace
 #
-#start a 50m pomodoro (second binding
+#start a 50m pomodoro (second binding)
 "sleep .1; bash /home/aaron/scripts/pomodoro.sh -m 50 &"
 Control + Shift + Print
 
@@ -209,7 +209,7 @@ Shift + Mod4 + Delete
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/goalbanner.sh"
 Mod4 + Shift + BackSpace
 
-#arandr (xrandr gui)
+#open arandr (xrandr gui)
 "arandr"
 Mod4 + shift + a
 
@@ -255,10 +255,6 @@ Mod4 + Shift + 3
 "spotify"
 Mod4 + backslash
 
-#ergodox layout cheatsheet
-"pqiv -fti ~/scripts/ergodox_layout.png"
-Mod4 + 6
-
 #down key x15
 "sleep .1; bash /home/aaron/scripts/multi_keyer.sh Down 50 15 &"
 Mod4 + Down
@@ -287,15 +283,15 @@ Mod4 + Shift + t
 "sleep .5; bash /home/aaron/scripts/anki_vim_clear_macro.sh &"
 Mod4 + 2
 
-#put an osd_cat arrow on the screen to the left of the cursor
+#use osd_cat to put an arrow to the left of the cursor
 "/home/aaron/scripts/wrapper_left.sh"
 Shift + Mod4 + period
 
-#put an osd_cat arrow on the screen to the right of the cursor
+#use osd_cat to put an arrow to the right of the cursor
 "/home/aaron/scripts/wrapper_right.sh"
 Shift + Mod4 + comma
 
-#put an osd_cat arrow on the screen to the left of the cursor
+#use osd_cat to put a blank white rectangle on the screen
 "/home/aaron/scripts/wrapper_whiteout.sh"
 Shift + Mod4 + space
 
