@@ -307,14 +307,14 @@ Mod4 + Home
 "/home/aaron/scripts/monitor_shutoff.sh"
 Shift + Alt + Mod4 + m
 
-#ohhh
+#ohhh sound effect
 "~/scripts/sound_effect.sh orc_audio.wav"
 Mod4 + shift + o
 
-#airhorn
+#airhorn sound effect
 "~/scripts/sound_effect.sh ~/scripts/airhorn.wav"
 Mod4 + shift + 9
  
-#rimshot
+#rimshot sound effect
 "~/scripts/sound_effect.sh ~/scripts/rimshot.wav"
 Mod4 + shift + 8
