@@ -1,5 +1,12 @@
 video_length = input("Video length? (hh:mm:ss): ")
-hh, mm, ss = [int(val) for val in video_length.split(":")]
+split_vals = [int(val) for val in video_length.split(":")]
+if len(split_vals) == 3:
+    hh, mm, ss = split_vals
+elif len(split_vals) == 2:
+    hh, mm, ss = (0, *split_vals)
+else:
+    print(f'Bad input ("{video_length}"), exiting')
+    exit()
 
 total_seconds = (hh * 3600) + (mm * 60) + ss
 
