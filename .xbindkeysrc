@@ -275,7 +275,7 @@ Mod4 + Shift + 0
 "sleep 1; bash /home/aaron/scripts/ankify_image.sh&"
 Mod4 + 1
 
-#OCR the text inside an area screenshot and output to vim
+#(attempt to) OCR the text inside an area screenshot and output to vim
 "/home/aaron/scripts/extract_text_from_area_screen.sh"
 Mod4 + Shift + t
 
