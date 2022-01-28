@@ -129,7 +129,7 @@ Shift + XF86AudioLowerVolume
 XF86AudioMute
 
 #open a python prompt
-"xfce4-terminal --hide-menubar -e python3"
+"xfce4-terminal --hide-menubar -e /home/aaron/anaconda3/bin/ipython"
 Mod4 + Shift + P
 
 #open nautilus
