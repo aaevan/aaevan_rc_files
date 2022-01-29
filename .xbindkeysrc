@@ -255,15 +255,15 @@ Mod4 + Shift + 3
 "spotify"
 Mod4 + backslash
 
-#down key x15
+#press down key 15x
 "sleep .1; bash /home/aaron/scripts/multi_keyer.sh Down 50 15 &"
 Mod4 + Down
 
-#up key x15
+#press up key 15x
 "sleep .1; bash /home/aaron/scripts/multi_keyer.sh Up 50 15 &"
 Mod4 + Up
 
-#xrandr-invert-colors
+#invert the screen!
 "xrandr-invert-colors"
 Mod4 + i
 
@@ -279,7 +279,7 @@ Mod4 + 1
 "/home/aaron/scripts/extract_text_from_area_screen.sh"
 Mod4 + Shift + t
 
-#wipe an entire vim document ("ggvG$")
+#macro to wipe an entire vim document ("ggvG$")
 "sleep .5; bash /home/aaron/scripts/anki_vim_clear_macro.sh &"
 Mod4 + 2
 
