@@ -14,3 +14,6 @@ gvim +PluginInstall +qall
 
 #in firefox's about:config, make sure to set full-screen-api.ignore-widgets to true
 #makes i3 play nicely with other windows when in fullscreen.
+
+#in nautilus, right click on various files and select properties --> open with
+# in that tab, select VLC (or whatever filetype you want to be the default) as the new default.
