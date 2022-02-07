@@ -4,6 +4,6 @@
 # with mod4 and shift still held down (not doing this causes hilarious problems)
 sleep 1
 
-command_str=":w note_$(date '+%m-%d-%y_%H-%M-%S').txt"
+command_str=":w /home/aaron/notes/note_$(date '+%m-%d-%y_%H-%M-%S').txt"
 
 xdotool type "$command_str"
