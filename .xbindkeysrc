@@ -116,13 +116,13 @@ XF86AudioLowerVolume
 "~/scripts/volume_osd.sh"
 XF86AudioLowerVolume
 
-#volume SMALL-up
+#volume up (fine)
 "amixer -D pulse sset Master 1%+"
 Shift + XF86AudioRaiseVolume
 "~/scripts/volume_osd.sh"
 Shift + XF86AudioRaiseVolume
 
-#volume SMALL-down
+#volume down (fine)
 "amixer -D pulse sset Master 1%-"
 Shift + XF86AudioLowerVolume
 "~/scripts/volume_osd.sh"
@@ -141,7 +141,7 @@ Mod4 + Shift + P
 Mod4 + n
 
 #rick astley
-"firefox https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+"vlc ~/scripts/astley.mp3"
 Mod4 + 8
 
 #close my eyes
