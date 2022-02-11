@@ -144,10 +144,6 @@ Mod4 + n
 "vlc ~/scripts/astley.mp3"
 Mod4 + 8
 
-#close my eyes
-"firefox https://youtu.be/Ss0kFNUP4P4?t=1m11s"
-Mod4 + Shift + l
-
 #gen.lib.rus.ec
 #"firefox gen.lib.rus.ec"
 "firefox libgen.rs"
@@ -174,22 +170,22 @@ Mod4 + 0
 Mod4 + g
 
 #10m yoga hotkey
-"firefox https://www.youtube.com/watch?v=D9q5WsMk4ro"
-Mod4 + y
+#"firefox https://www.youtube.com/watch?v=D9q5WsMk4ro"
+#Mod4 + y
 
 #7m workout hotkey
-"firefox https://www.youtube.com/watch?v=Jru5B044HOs"
-Mod4 + 7
+#"firefox https://www.youtube.com/watch?v=Jru5B044HOs"
+#Mod4 + 7
 
-#survival series quote (requires libxosd)
+#survival series quote
 "/home/aaron/scripts/randquote.sh"
 Mod4 + q
 
-#truisms series quote (requires libxosd)
+#truisms series quote
 "/home/aaron/scripts/truisms.sh"
 Mod4 + Shift + q
 
-#start a 25m pomodoro
+#start a 25m pomodoro (requires libxosd)
 "sleep .1; bash /home/aaron/scripts/pomodoro.sh &"
 Mod4 + BackSpace
 
