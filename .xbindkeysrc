@@ -149,6 +149,10 @@ Mod4 + 8
 "firefox libgen.rs"
 Mod4 + Shift + g
 
+#open google scholar
+"firefox https://scholar.google.com/"
+Mod4 + Shift + s
+
 #open ebay
 "firefox ebay.com"
 Mod4 + e
