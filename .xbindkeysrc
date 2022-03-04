@@ -132,6 +132,10 @@ Shift + XF86AudioLowerVolume
 "~/scripts/muter.sh"
 XF86AudioMute
 
+#spotify muter
+"~/scripts/spotify_muter.sh"
+Mod4 + XF86AudioMute
+
 #open a python prompt
 "xfce4-terminal --hide-menubar -e /home/aaron/anaconda3/bin/ipython"
 Mod4 + Shift + P
