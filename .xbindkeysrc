@@ -133,7 +133,11 @@ Shift + XF86AudioLowerVolume
 XF86AudioMute
 
 #spotify muter
-"~/scripts/spotify_muter.sh"
+#"~/scripts/spotify_muter.sh"
+#Mod4 + XF86AudioMute
+
+#mute for 30s
+"~/scripts/30s_mute.sh"
 Mod4 + XF86AudioMute
 
 #open a python prompt
