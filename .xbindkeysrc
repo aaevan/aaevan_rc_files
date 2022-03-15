@@ -275,6 +275,30 @@ Mod4 + Up
 "xrandr-invert-colors"
 Mod4 + i
 
+#flip the screen on the x axis
+"xrandr x"
+Mod4 + x
+
+#flip the screen on the y axis
+"xrandr -y"
+Mod4 + y
+
+#rotate the screen to the left orientation
+"xrandr --output eDP1 --rotate left"
+Mod4 + Shift + Left
+#
+#rotate the screen to the right orientation
+"xrandr --output eDP1 --rotate right"
+Mod4 + Shift + Right
+#
+#rotate the screen to the inverted orientation
+"xrandr --output eDP1 --rotate inverted"
+Mod4 + Shift + Down
+#
+#rotate the screen to the normal orientation
+"xrandr --output eDP1 --rotate normal"
+Mod4 + Shift + Up
+
 #take an area screenshot and put it in /home/ankify
 "/home/aaron/scripts/ankify_screenshot.sh"
 Mod4 + Shift + 0
