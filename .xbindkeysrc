@@ -276,7 +276,7 @@ Mod4 + Up
 Mod4 + i
 
 #flip the screen on the x axis
-"xrandr x"
+"xrandr -x"
 Mod4 + x
 
 #flip the screen on the y axis
