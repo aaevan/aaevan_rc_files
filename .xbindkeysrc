@@ -1,3 +1,7 @@
+#open most recent screenshot from ankify directory
+"~/scripts/open_most_recent.sh"
+Shift + Mod4 + minus
+
 #open a terminal at the last cd'd to directory:
 "~/scripts/last_cd_term.sh"
 Shift + Mod4 + Return
