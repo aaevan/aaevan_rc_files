@@ -51,12 +51,16 @@ Mod4 + m
 Mod4 + f
 
 #check the weather!
-"/home/aaron/scripts/weather_wrapper.sh"
-Mod4 + w
+#"/home/aaron/scripts/weather_wrapper.sh"
+#Mod4 + w
 
 #open google calendar
 "firefox calendar.google.com"
 Mod4 + c
+
+#weather for Brattleboro
+"firefox https://www.wunderground.com/forecast/us/vt/brattleboro"
+Mod4 + w
 
 #xkill
 "xkill"
@@ -73,6 +77,10 @@ Mod4 + Shift + n
 #within vim and as a macro, type out the same filename as the above format. Don't type enter.
 "/home/aaron/scripts/date_write_macro.sh"
 Mod4 + Shift + w
+
+#write the current date
+"/home/aaron/scripts/current_date_macro.sh"
+Mod4 + equal
 
 #push changes to config files to git
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/push_rcs_to_git.sh"
@@ -168,6 +176,14 @@ Mod4 + e
 #open craigslist
 "firefox https://westernmass.craigslist.org/"
 Shift + Mod4 + c
+#
+#open youtube
+"firefox youtube.com"
+Shift + Mod4 + y
+#
+#open ebay
+"firefox ebay.com"
+Shift + Mod4 + e
 
 #open scihub
 "firefox https://sci-hub.ru"
@@ -240,10 +256,6 @@ Mod4 + Right
 #spotify play/pause toggle
 "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
 Mod4 + space
-
-#open document viewer
-"evince"
-Mod4 + equal
 
 #open jupyter notebook
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/open_notebook.sh"
