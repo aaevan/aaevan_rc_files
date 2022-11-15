@@ -22,9 +22,13 @@ Shift + Alt + Mod4 + f
 "gvim /home/aaron/.xbindkeysrc"
 Mod4 + shift + k
 
+#open beeminder
+"firefox beeminder.com"
+Mod4 + b
+#
 #open bashrc in vim
 "gvim /home/aaron/.bashrc"
-Mod4 + b
+Mod4 + shift + b
 
 #open i3wm config file
 "gvim /home/aaron/.i3/config"
@@ -248,6 +252,10 @@ Mod4 + shift + a
 #default screen layout:
 "/home/aaron/.screenlayout/default.sh"
 Mod4 + shift + d
+#
+#insert current date (DD/MM/YY)
+"~/scripts/mm_dd_yy_write_macro.sh"
+Mod4 + shift + Alt + d
 
 #spotify previous song
 "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
