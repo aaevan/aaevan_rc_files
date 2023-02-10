@@ -23,7 +23,7 @@ Shift + Alt + Mod4 + f
 Mod4 + shift + k
 
 #open beeminder
-"firefox beeminder.com"
+"firefox beeminder.com/aaevan"
 Mod4 + b
 #
 #open bashrc in vim
@@ -371,6 +371,14 @@ Mod4 + shift + o
 "~/scripts/sound_effect.sh ~/scripts/airhorn.wav"
 Mod4 + shift + 9
  
+#transformers sound effect
+"~/scripts/sound_effect.sh ~/scripts/transformers.wav"
+Mod4 + shift + equal
+
 #rimshot sound effect
 "~/scripts/sound_effect.sh ~/scripts/rimshot.wav"
 Mod4 + shift + 8
+
+#suspend
+"systemctl suspend"
+XF86WakeUp
