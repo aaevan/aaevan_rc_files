@@ -173,6 +173,7 @@ bar {
     colors {
         background #111111
     }
+    tray_output eDP1
 }
 
 hide_edge_borders both

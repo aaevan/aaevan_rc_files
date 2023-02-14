@@ -51,5 +51,3 @@ disk "/" {
 cpu_usage {
         format = "cpu:%usage"
 }
-
-
