@@ -17,3 +17,6 @@ gvim +PluginInstall +qall
 
 #in nautilus, right click on various files and select properties --> open with
 # in that tab, select VLC (or whatever filetype you want to be the default) as the new default.
+
+# for i3, add the official repo following the below instructions because ubuntu uses a super old version.
+# https://i3wm.org/docs/repositories.html (section below "stable releases")

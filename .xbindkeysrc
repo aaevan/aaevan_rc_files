@@ -380,5 +380,5 @@ Mod4 + shift + equal
 Mod4 + shift + 8
 
 #suspend
-"systemctl suspend"
-XF86WakeUp
+#"systemctl suspend"
+#XF86WakeUp
