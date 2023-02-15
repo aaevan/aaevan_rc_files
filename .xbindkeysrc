@@ -382,3 +382,11 @@ Mod4 + shift + 8
 #suspend
 #"systemctl suspend"
 #XF86WakeUp
+
+# open assimil directory
+"nautilus /media/aaron/1TB/downloads/Instructional/Assimil\ Japanese\ With\ Ease/Audio"
+Mod4 + shift + L
+
+# open assimil pdf
+"evince /media/aaron/1TB/downloads/Instructional/Assimil\ Japanese\ With\ Ease/Assimil\ Japanese\ With\ Ease\ volume\ 1.pdf"
+Mod4 + shift + L
