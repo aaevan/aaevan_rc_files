@@ -152,6 +152,10 @@ XF86AudioMute
 #"~/scripts/spotify_muter.sh"
 #Mod4 + XF86AudioMute
 
+#vlc pause/unpause
+"~/scripts/vlc_pause.sh"
+Mod4 + space
+
 #mute for 30s
 "~/scripts/30s_mute.sh"
 Mod4 + XF86AudioMute
@@ -265,9 +269,9 @@ Mod4 + Left
 "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 Mod4 + Right
 
-#spotify play/pause toggle
-"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-Mod4 + space
+##spotify play/pause toggle
+#"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+#Mod4 + space
 
 #open jupyter notebook
 "xfce4-terminal --hide-menubar -e /home/aaron/scripts/open_notebook.sh"
@@ -380,8 +384,8 @@ Mod4 + shift + equal
 Mod4 + shift + 8
 
 #suspend
-#"systemctl suspend"
-#XF86WakeUp
+"systemctl suspend"
+Control + Mod4 + Escape
 
 # open assimil directory
 "nautilus /media/aaron/1TB/downloads/Instructional/Assimil\ Japanese\ With\ Ease/Audio"
