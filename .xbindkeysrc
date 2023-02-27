@@ -79,7 +79,7 @@ Mod4 + Shift + x
 Mod4 + Shift + v
 
 #open a new timestamped note in vim
-"gvim /home/aaron/notes/note_$(date '+%m-%d-%y_%H-%M-%S').txt"
+"gvim /home/aaron/notes/note_$(date '+%s_%m-%d-%y_%H-%M-%S').txt"
 Mod4 + Shift + n
 
 #within vim and as a macro, type out the same filename as the above format. Don't type enter.
@@ -256,6 +256,11 @@ Mod4 + shift + a
 #default screen layout:
 "/home/aaron/.screenlayout/default.sh"
 Mod4 + shift + d
+#
+#triple screen layout:
+"xrandr --output VIRTUAL1 --off --output eDP1 --primary --mode 1600x900 --pos 1136x1080 --rotate normal --output DP1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP2 --off --output HDMI2 --off --output HDMI1 --off --output VGA1 --mode 1920x1080 --pos 0x0 --rotate normal"
+Mod4 + shift + Control + d
+
 #
 #insert current date (DD/MM/YY)
 "~/scripts/mm_dd_yy_write_macro.sh"
