@@ -399,3 +399,15 @@ Mod4 + shift + L
 # open assimil pdf
 "evince /media/aaron/1TB/downloads/Instructional/Assimil\ Japanese\ With\ Ease/Assimil\ Japanese\ With\ Ease\ volume\ 1.pdf"
 Mod4 + shift + L
+
+# i3 move workspace to monitor 1
+"i3-msg move workspace to output $(xrandr --listactivemonitors| grep '0:' | grep -Po '[^ ]*$')"
+Mod4 + Shift + alt + 1
+
+# i3 move workspace to monitor 2
+"i3-msg move workspace to output $(xrandr --listactivemonitors| grep '1:' | grep -Po '[^ ]*$')"
+Mod4 + Shift + alt + 2
+
+# i3 move workspace to monitor 3
+"i3-msg move workspace to output $(xrandr --listactivemonitors| grep '2:' | grep -Po '[^ ]*$')"
+Mod4 + Shift + alt + 3
